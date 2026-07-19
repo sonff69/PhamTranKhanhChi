@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Phạm Trần Khánh Chi - Nhật Ký Hành Trình Số</title>
+    <title>Phạm Trần Khánh Chi Portfolio</title>
     <!-- Google Fonts hỗ trợ tiếng Việt mượt mà -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -1232,6 +1232,61 @@
             line-height: 1.5;
         }
 
+        /* CSS PHÒNG CHỐNG OVERLAP SAO TRÊN CHỮ CHO PHẦN REFLECTION */
+        #reflection {
+            position: relative;
+            z-index: 5; /* Nổi lên hẳn trên canvas sao */
+            padding: 80px 5%;
+        }
+
+        .reflection-container {
+            background: rgba(10, 16, 32, 0.95) !important; /* Đủ tối để che hoàn toàn sao trắng của back.jpg */
+            border: 1px solid rgba(189, 166, 255, 0.25);
+            border-radius: 24px;
+            padding: 45px;
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            margin-top: 30px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+            position: relative;
+            z-index: 10;
+        }
+
+        .reflection-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .reflection-block {
+            background: rgba(255, 255, 255, 0.03) !important;
+            border: 1px solid rgba(255, 255, 255, 0.08) !important;
+            border-radius: 16px;
+            padding: 30px;
+            transition: var(--transition);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        .reflection-block:hover {
+            border-color: rgba(189, 166, 255, 0.4) !important;
+            background: rgba(123, 94, 240, 0.08) !important;
+            transform: translateY(-5px);
+            box-shadow: 0 12px 35px rgba(123, 94, 240, 0.2);
+        }
+
+        /* PHÒNG CHỐNG OVERLAP SAO CHO PHẦN FOOTER */
+        footer {
+            text-align: center;
+            padding: 60px 5% 40px 5%;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            background: #060913 !important; /* Dùng màu nền đặc để chặn đứng hoàn toàn sao trắng */
+            border-top: 1px solid var(--glass-border);
+            position: relative;
+            z-index: 15;
+        }
+
         @media (max-width: 900px) {
             .hero-container {
                 grid-template-columns: 1fr;
@@ -1411,13 +1466,15 @@
         </div>
     </section>
 
+    <!-- SECTION TỔNG KẾT ĐƯỢC THIẾT KẾ CẢI TIẾN TRÁNH BỊ OVERLAP ĐÈ CHỮ SẠCH SẼ -->
     <section id="reflection">
-        <div class="section-header">
-            <h2>Góc nhìn sau Hành trình</h2>
-            <p>Nhìn nhận nghiêm túc về những thuận lợi, thử thách và bài học giá trị thu nhận được từ học phần.</p>
-        </div>
-
         <div class="reflection-container">
+            <!-- ĐƯA HEADER VÀO TRONG CONTAINER MASK TỐI ĐỂ HOÀN TOÀN KHÔNG BỊ OVERLAP SAO NỀN -->
+            <div class="section-header" style="margin-bottom: 40px;">
+                <h2>Góc nhìn sau Hành trình</h2>
+                <p>Nhìn nhận nghiêm túc về những thuận lợi, thử thách và bài học giá trị thu nhận được từ học phần.</p>
+            </div>
+
             <div class="reflection-grid">
                 <div class="reflection-block">
                     <h4><i class="fa-solid fa-heart"></i> Thuận lợi gặt hái</h4>
@@ -1785,7 +1842,7 @@
                     <div class="timeline-event">
                         <div class="timeline-event-time">05:00 - 15:00</div>
                         <div class="timeline-event-title">Bạn Hà thuyết trình thử nghiệm</div>
-                        <div class="timeline-event-desc">Hà bắt đầu thuyết trình bài nói "Các từ vựng tiếng Hàn sơ cấp" kết hợp trình chiếu slide. Cả nhóm cùng rà soát các từ vựng căn bản (như các động từ 먹다, 자다, 가다 hay các danh từ quen thuộc 물, 음식, 학교).</div>
+                        <div class="timeline-event-desc">Hà bắt đầu thuyết trình bài nói "Các từ vựng tiếng Hàn sơ cấp" kết hợp trình chiếu slide. Cả nhóm cùng rà soát các từ vựng căn bản (như các động từ 먹다, 자다, 가다 hay các danh từ quen thuộc 물, ẩm thực, 학교).</div>
                     </div>
                     <div class="timeline-event">
                         <div class="timeline-event-time">15:00 - 25:00</div>
@@ -1938,7 +1995,6 @@
         /* --- LOGIC TRÌNH GIẢ LẬP FILE EXPLORER (BÀI 1) --- */
         let currentExpStep = 1;
         function setExpStep(step) {
-            currentExpStep = step;
             const addressBar = document.getElementById('exp-address-text');
             const gridContent = document.getElementById('exp-grid-content');
             const statusMsg = document.getElementById('exp-status-msg');
@@ -1955,136 +2011,158 @@
 
             switch(step) {
                 case 1:
-                    addressBar.innerText = "This PC";
-                    gridContent.innerHTML = `
-                        <div class="exp-item folder" onclick="setExpStep(2)">
-                            <i class="fa-solid fa-hard-drive" style="color: #4a90e2;"></i>
-                            <span>Ổ học tập (D:)</span>
-                        </div>
-                        <div class="exp-item folder">
-                            <i class="fa-solid fa-hard-drive" style="color: #a6b2c9;"></i>
-                            <span>Ổ hệ thống (C:)</span>
-                        </div>
-                    `;
-                    statusMsg.innerText = "Bước 1: Nhấn Win+E, File Explorer mở ra với ổ đĩa học tập D: và ổ C:. Click vào ổ D: để dạo chơi tiếp nhé.";
+                    if (addressBar) addressBar.innerText = "This PC";
+                    if (gridContent) {
+                        gridContent.innerHTML = `
+                            <div class="exp-item folder" onclick="setExpStep(2)">
+                                <i class="fa-solid fa-hard-drive" style="color: #4a90e2;"></i>
+                                <span>Ổ học tập (D:)</span>
+                            </div>
+                            <div class="exp-item folder">
+                                <i class="fa-solid fa-hard-drive" style="color: #a6b2c9;"></i>
+                                <span>Ổ hệ thống (C:)</span>
+                            </div>
+                        `;
+                    }
+                    if (statusMsg) statusMsg.innerText = "Bước 1: Nhấn Win+E, File Explorer mở ra với ổ đĩa học tập D: và ổ C:. Click vào ổ D: để dạo chơi tiếp nhé.";
                     break;
                 case 2:
-                    addressBar.innerText = "This PC > Ổ học tập (D:)";
-                    gridContent.innerHTML = `
-                        <div class="exp-item folder" style="opacity:0.5;">
-                            <i class="fa-solid fa-folder"></i>
-                            <span>Office 2016</span>
-                        </div>
-                    `;
-                    statusMsg.innerText = "Bước 2: Bạn đã vào trong ổ đĩa học tập (D:). Hiện ổ đĩa chưa có thư mục học tập của mình.";
+                    if (addressBar) addressBar.innerText = "This PC > Ổ học tập (D:)";
+                    if (gridContent) {
+                        gridContent.innerHTML = `
+                            <div class="exp-item folder" style="opacity:0.5;">
+                                <i class="fa-solid fa-folder"></i>
+                                <span>Office 2016</span>
+                            </div>
+                        `;
+                    }
+                    if (statusMsg) statusMsg.innerText = "Bước 2: Bạn đã vào trong ổ đĩa học tập (D:). Hiện ổ đĩa chưa có thư mục học tập của mình.";
                     break;
                 case 3:
-                    addressBar.innerText = "This PC > Ổ học tập (D:)";
-                    gridContent.innerHTML = `
-                        <div class="exp-item folder" style="opacity:0.5;">
-                            <i class="fa-solid fa-folder"></i>
-                            <span>Office 2016</span>
-                        </div>
-                        <div class="exp-item folder" onclick="setExpStep(4)" style="border: 1px dashed var(--primary-light); border-radius:8px; padding:5px;">
-                            <i class="fa-solid fa-folder" style="color:#ffe599;"></i>
-                            <span>THUCHANH_PhamTranKhanhChi</span>
-                        </div>
-                    `;
-                    statusMsg.innerText = "Bước 3: Chuột phải chọn New -> Folder thành công! Đã tạo thư mục chính 'THUCHANH_PhamTranKhanhChi'. Click vào thư mục để đi tiếp nha.";
+                    if (addressBar) addressBar.innerText = "This PC > Ổ học tập (D:)";
+                    if (gridContent) {
+                        gridContent.innerHTML = `
+                            <div class="exp-item folder" style="opacity:0.5;">
+                                <i class="fa-solid fa-folder"></i>
+                                <span>Office 2016</span>
+                            </div>
+                            <div class="exp-item folder" onclick="setExpStep(4)" style="border: 1px dashed var(--primary-light); border-radius:8px; padding:5px;">
+                                <i class="fa-solid fa-folder" style="color:#ffe599;"></i>
+                                <span>THUCHANH_PhamTranKhanhChi</span>
+                            </div>
+                        `;
+                    }
+                    if (statusMsg) statusMsg.innerText = "Bước 3: Chuột phải chọn New -> Folder thành công! Đã tạo thư mục chính 'THUCHANH_PhamTranKhanhChi'. Click vào thư mục để đi tiếp nha.";
                     break;
                 case 4:
-                    addressBar.innerText = "D: > THUCHANH_PhamTranKhanhChi";
-                    gridContent.innerHTML = `<div style="color: var(--text-muted); font-size:0.75rem;">Thư mục này hiện chưa có nội dung.</div>`;
-                    statusMsg.innerText = "Bước 4: Bạn đang ở trong ngôi nhà lớn 'THUCHANH_PhamTranKhanhChi'. Hãy tạo tệp ghi chú mới.";
+                    if (addressBar) addressBar.innerText = "D: > THUCHANH_PhamTranKhanhChi";
+                    if (gridContent) gridContent.innerHTML = `<div style="color: var(--text-muted); font-size:0.75rem;">Thư mục này hiện chưa có nội dung.</div>`;
+                    if (statusMsg) statusMsg.innerText = "Bước 4: Bạn đang ở trong ngôi nhà lớn 'THUCHANH_PhamTranKhanhChi'. Hãy tạo tệp ghi chú mới.";
                     break;
                 case 5:
-                    addressBar.innerText = "D: > THUCHANH_PhamTranKhanhChi";
-                    gridContent.innerHTML = `
-                        <div class="exp-item file">
-                            <i class="fa-solid fa-file-lines" style="color:#a6b2c9;"></i>
-                            <span>GhiChu.txt</span>
-                        </div>
-                    `;
-                    statusMsg.innerText = "Bước 5: Chuột phải chọn New -> Text Document thành công! File 'GhiChu.txt' đã được khởi tạo.";
+                    if (addressBar) addressBar.innerText = "D: > THUCHANH_PhamTranKhanhChi";
+                    if (gridContent) {
+                        gridContent.innerHTML = `
+                            <div class="exp-item file">
+                                <i class="fa-solid fa-file-lines" style="color:#a6b2c9;"></i>
+                                <span>GhiChu.txt</span>
+                            </div>
+                        `;
+                    }
+                    if (statusMsg) statusMsg.innerText = "Bước 5: Chuột phải chọn New -> Text Document thành công! File 'GhiChu.txt' đã được khởi tạo.";
                     break;
                 case 6:
-                    addressBar.innerText = "D: > THUCHANH_PhamTranKhanhChi";
-                    gridContent.innerHTML = `
-                        <div class="exp-item file">
-                            <i class="fa-solid fa-file-lines" style="color:var(--primary-light);"></i>
-                            <span style="color:var(--accent-warm);">GhiChuQuanTrong.txt</span>
-                        </div>
-                    `;
-                    statusMsg.innerText = "Bước 6: Nhấp F2 để đổi tên tệp tin thành công! Tên mới hiển thị xinh xắn là 'GhiChuQuanTrong.txt'.";
+                    if (addressBar) addressBar.innerText = "D: > THUCHANH_PhamTranKhanhChi";
+                    if (gridContent) {
+                        gridContent.innerHTML = `
+                            <div class="exp-item file">
+                                <i class="fa-solid fa-file-lines" style="color:var(--primary-light);"></i>
+                                <span style="color:var(--accent-warm);">GhiChuQuanTrong.txt</span>
+                            </div>
+                        `;
+                    }
+                    if (statusMsg) statusMsg.innerText = "Bước 6: Nhấp F2 để đổi tên tệp tin thành công! Tên mới hiển thị xinh xắn là 'GhiChuQuanTrong.txt'.";
                     break;
                 case 7:
-                    addressBar.innerText = "D: > THUCHANH_PhamTranKhanhChi";
-                    gridContent.innerHTML = `
-                        <div class="exp-item file">
-                            <i class="fa-solid fa-file-lines"></i>
-                            <span>GhiChuQuanTrong.txt</span>
-                        </div>
-                        <div class="exp-item folder">
-                            <i class="fa-solid fa-folder"></i>
-                            <span>TaiLieu</span>
-                        </div>
-                    `;
-                    statusMsg.innerText = "Bước 7: Chuột phải chọn New -> Folder thành công! Đã tạo thêm hộc phụ con 'TaiLieu'.";
+                    if (addressBar) addressBar.innerText = "D: > THUCHANH_PhamTranKhanhChi";
+                    if (gridContent) {
+                        gridContent.innerHTML = `
+                            <div class="exp-item file">
+                                <i class="fa-solid fa-file-lines"></i>
+                                <span>GhiChuQuanTrong.txt</span>
+                            </div>
+                            <div class="exp-item folder">
+                                <i class="fa-solid fa-folder"></i>
+                                <span>TaiLieu</span>
+                            </div>
+                        `;
+                    }
+                    if (statusMsg) statusMsg.innerText = "Bước 7: Chuột phải chọn New -> Folder thành công! Đã tạo thêm hộc phụ con 'TaiLieu'.";
                     break;
                 case 8:
-                    addressBar.innerText = "D: > THUCHANH_PhamTranKhanhChi > TaiLieu";
-                    gridContent.innerHTML = `
-                        <div class="exp-item file">
-                            <i class="fa-solid fa-file-lines"></i>
-                            <span>GhiChuQuanTrong.txt</span>
-                        </div>
-                    `;
-                    statusMsg.innerText = "Bước 8: Nhấn Ctrl+C tệp nguồn ngoài thư mục chính, vào thư mục con 'TaiLieu' nhấn Ctrl+V. Bản sao của tệp đã được dán thành công ở đây.";
+                    if (addressBar) addressBar.innerText = "D: > THUCHANH_PhamTranKhanhChi > TaiLieu";
+                    if (gridContent) {
+                        gridContent.innerHTML = `
+                            <div class="exp-item file">
+                                <i class="fa-solid fa-file-lines"></i>
+                                <span>GhiChuQuanTrong.txt</span>
+                            </div>
+                        `;
+                    }
+                    if (statusMsg) statusMsg.innerText = "Bước 8: Nhấn Ctrl+C tệp nguồn ngoài thư mục chính, vào thư mục con 'TaiLieu' nhấn Ctrl+V. Bản sao của tệp đã được dán thành công ở đây.";
                     break;
                 case 9:
-                    addressBar.innerText = "D: > THUCHANH_PhamTranKhanhChi > TaiLieu";
-                    gridContent.innerHTML = `
-                        <div class="exp-item file">
-                            <i class="fa-solid fa-file-lines"></i>
-                            <span>GhiChuQuanTrong.txt</span>
-                        </div>
-                        <div class="exp-item file" style="border: 1px dashed var(--primary-light); border-radius:8px; padding:5px;">
-                            <i class="fa-solid fa-file-lines" style="color:#a6b2c9;"></i>
-                            <span>DiChuyen.txt</span>
-                        </div>
-                    `;
-                    statusMsg.innerText = "Bước 9: Thực hiện di chuyển tệp tin (Ctrl+X bên ngoài và Ctrl+V vào trong TaiLieu). File 'DiChuyen.txt' ngoài thư mục gốc đã dọn đi.";
+                    if (addressBar) addressBar.innerText = "D: > THUCHANH_PhamTranKhanhChi > TaiLieu";
+                    if (gridContent) {
+                        gridContent.innerHTML = `
+                            <div class="exp-item file">
+                                <i class="fa-solid fa-file-lines"></i>
+                                <span>GhiChuQuanTrong.txt</span>
+                            </div>
+                            <div class="exp-item file" style="border: 1px dashed var(--primary-light); border-radius:8px; padding:5px;">
+                                <i class="fa-solid fa-file-lines" style="color:#a6b2c9;"></i>
+                                <span>DiChuyen.txt</span>
+                            </div>
+                        `;
+                    }
+                    if (statusMsg) statusMsg.innerText = "Bước 9: Thực hiện di chuyển tệp tin (Ctrl+X bên ngoài và Ctrl+V vào trong TaiLieu). File 'DiChuyen.txt' ngoài thư mục gốc đã dọn đi.";
                     break;
                 case 10:
-                    addressBar.innerText = "D: > THUCHANH_PhamTranKhanhChi > TaiLieu";
-                    gridContent.innerHTML = `
-                        <div class="exp-item file">
-                            <i class="fa-solid fa-file-lines"></i>
-                            <span>DiChuyen.txt</span>
-                        </div>
-                    `;
-                    statusMsg.innerText = "Bước 10: Chuột phải chọn Delete tệp 'GhiChuQuanTrong.txt'. File đã được chuyển tạm vào Sọt rác.";
+                    if (addressBar) addressBar.innerText = "D: > THUCHANH_PhamTranKhanhChi > TaiLieu";
+                    if (gridContent) {
+                        gridContent.innerHTML = `
+                            <div class="exp-item file">
+                                <i class="fa-solid fa-file-lines"></i>
+                                <span>DiChuyen.txt</span>
+                            </div>
+                        `;
+                    }
+                    if (statusMsg) statusMsg.innerText = "Bước 10: Chuột phải chọn Delete tệp 'GhiChuQuanTrong.txt'. File đã được chuyển tạm vào Sọt rác.";
                     break;
                 case 11:
-                    addressBar.innerText = "D: > THUCHANH_PhamTranKhanhChi > TaiLieu";
-                    gridContent.innerHTML = `
-                        <div class="exp-item file">
-                            <i class="fa-solid fa-file-lines"></i>
-                            <span>DiChuyen.txt</span>
-                        </div>
-                    `;
+                    if (addressBar) addressBar.innerText = "D: > THUCHANH_PhamTranKhanhChi > TaiLieu";
+                    if (gridContent) {
+                        gridContent.innerHTML = `
+                            <div class="exp-item file">
+                                <i class="fa-solid fa-file-lines"></i>
+                                <span>DiChuyen.txt</span>
+                            </div>
+                        `;
+                    }
                     if (alertBox) alertBox.style.display = 'block';
-                    statusMsg.innerText = "Bước 11: Chọn file 'DiChuyen.txt', nhấn tổ hợp phím Shift + Delete. Hệ thống hiển thị hộp cảnh báo xóa vĩnh viễn.";
+                    if (statusMsg) statusMsg.innerText = "Bước 11: Chọn file 'DiChuyen.txt', nhấn tổ hợp phím Shift + Delete. Hệ thống hiển thị hộp cảnh báo xóa vĩnh viễn.";
                     break;
                 case 12:
-                    addressBar.innerText = "D: > THUCHANH_PhamTranKhanhChi > TaiLieu";
-                    gridContent.innerHTML = `
-                        <div class="exp-item file" style="border:1px dashed var(--accent-warm); border-radius:8px; padding:5px;">
-                            <i class="fa-solid fa-file-lines" style="color:#bda6ff;"></i>
-                            <span>GhiChuQuanTrong.txt</span>
-                        </div>
-                    `;
-                    statusMsg.innerText = "Bước 12: Vào Sọt rác, chuột phải vào tệp GhiChuQuanTrong.txt chọn Restore. Tệp đã quay trở về thư mục 'TaiLieu' an toàn rồi nè!";
+                    if (addressBar) addressBar.innerText = "D: > THUCHANH_PhamTranKhanhChi > TaiLieu";
+                    if (gridContent) {
+                        gridContent.innerHTML = `
+                            <div class="exp-item file" style="border:1px dashed var(--accent-warm); border-radius:8px; padding:5px;">
+                                <i class="fa-solid fa-file-lines" style="color:#bda6ff;"></i>
+                                <span>GhiChuQuanTrong.txt</span>
+                            </div>
+                        `;
+                    }
+                    if (statusMsg) statusMsg.innerText = "Bước 12: Vào Sọt rác, chuột phải vào tệp GhiChuQuanTrong.txt chọn Restore. Tệp đã quay trở về thư mục 'TaiLieu' an toàn rồi nè!";
                     break;
             }
         }
@@ -2096,14 +2174,14 @@
             
             if (gridContent) gridContent.innerHTML = `<div style="color: var(--text-muted); font-size:0.75rem;">Thư mục này hiện không có nội dung.</div>`;
             if (alertBox) alertBox.style.display = 'none';
-            if (statusMsg) statusMsg.innerText = "Xác nhận xóa vĩnh viễn thành công! Tệp 'DiChuyen.txt' đã bay màu hoàn toàn khỏi máy tính.";
+            if (statusMsg) statusMsg.innerText = "Xác nhận xóa vĩnh viễn thành công! Tệp 'DiChuyen.txt' đã bị hủy hoàn toàn khỏi máy tính.";
         }
 
         function cancelShiftDelete() {
             const alertBox = document.getElementById('exp-alert-box');
             const statusMsg = document.getElementById('exp-status-msg');
             if (alertBox) alertBox.style.display = 'none';
-            if (statusMsg) statusMsg.innerText = "Đã hủy lệnh xóa vĩnh viễn. Tệp 'DiChuyen.txt' vẫn nằm im an toàn.";
+            if (statusMsg) statusMsg.innerText = "Đã hủy lệnh xóa vĩnh viễn. Tệp 'DiChuyen.txt' vẫn được giữ lại an toàn.";
         }
 
         /* --- LOGIC SO SÁNH PROMPT BÀI 3 --- */
@@ -2115,17 +2193,17 @@
                     <div class="prompt-column">
                         <div class="prompt-col-title">Prompt Cơ bản</div>
                         <div class="prompt-col-text">"Dịch đoạn văn sau sang tiếng Hàn và giải thích nghĩa."</div>
-                        <div class="prompt-col-eval"><b>Đánh giá:</b> Bạn AI trả lời hơi bị lười một tí, dịch sát sạt nghĩa đen (word-by-word) nghe rất thô và cứng nhắc.</div>
+                        <div class="prompt-col-eval"><b>Đánh giá:</b> Bạn AI dịch thô, sát nghĩa đen (word-by-word) nghe khá thô và cứng nhắc.</div>
                     </div>
                     <div class="prompt-column">
                         <div class="prompt-col-title">Prompt Cải tiến</div>
                         <div class="prompt-col-text">"Hãy dịch đoạn văn tiếng Việt sau sang tiếng Hàn. Sau đó: giải thích các từ vựng quan trọng, cấu trúc ngữ pháp chính trong đoạn văn và giải thích chi tiết sắc thái biểu cảm của các câu."</div>
-                        <div class="prompt-col-eval"><b>Đánh giá:</b> Bạn AI dịch hay hơn rồi nè, có bóc tách từ vựng cơ bản nhưng chưa đưa ra ngữ cảnh cụ thể hay ví dụ thực hành.</div>
+                        <div class="prompt-col-eval"><b>Đánh giá:</b> Bạn AI dịch đã mượt hơn, bóc tách cấu trúc rõ ràng nhưng chưa cho ví dụ thực tế áp dụng.</div>
                     </div>
                     <div class="prompt-column highlighted">
                         <div class="prompt-col-title">✦ Prompt Nâng cao (CLEAR)</div>
                         <div class="prompt-col-text">"Bạn là một giáo viên bộ môn tiếng Hàn có kinh nghiệm giảng dạy cho sinh viên có mong muốn học tiếng Hàn, bạn hãy dịch toàn bộ đoạn văn tiếng Việt sau sang tiếng Hàn một cách tự nhiên và đúng ngữ cảnh. Sau đó liệt kê các từ vựng quan trọng kèm ngữ nghĩa và cách sử dụng chúng, phân tích chi tiết các ngữ pháp được sử dụng trong đoạn văn và đưa ra ví dụ cách sử dụng ngữ pháp đó, giải thích sắc thái biểu cảm trong câu."</div>
-                        <div class="prompt-col-eval"><b>Đánh giá:</b> Bạn AI hóa thân thành giáo sư sư phạm cực kỳ có tâm, dịch tự nhiên như người bản xứ, phân tích chi tiết kèm cả ví dụ ứng dụng thực hành siêu hay luôn.</div>
+                        <div class="prompt-col-eval"><b>Đánh giá:</b> Bạn AI hóa thân thành giảng viên thực thụ, dịch mượt mà tự nhiên, hướng dẫn đầy đủ kèm các ví dụ thực hành siêu chất lượng.</div>
                     </div>
                 </div>
             `,
@@ -2136,17 +2214,17 @@
                     <div class="prompt-column">
                         <div class="prompt-col-title">Prompt Cơ bản</div>
                         <div class="prompt-col-text">"Hãy lên kế hoạch ôn thi TOPIK."</div>
-                        <div class="prompt-col-eval"><b>Đánh giá:</b> Bạn AI cho một kế hoạch rất máy móc, chung chung (học từ vựng mỗi ngày 30 phút), không chia giai đoạn rõ rệt nên cực khó theo học.</div>
+                        <div class="prompt-col-eval"><b>Đánh giá:</b> Kế hoạch chung chung, tẻ nhạt (ngày học 30 phút), không có mục tiêu rõ ràng của từng giai đoạn.</div>
                     </div>
                     <div class="prompt-column">
                         <div class="prompt-col-title">Prompt Cải tiến</div>
                         <div class="prompt-col-text">"Hãy lập kế hoạch ôn thi TOPIK 2 trong 3 tháng cho sinh viên với trình độ sơ cấp và phù hợp với sinh viên bận học trên trường vào các buổi chiều. Kế hoạch bao gồm: mục tiêu từng tuần, thời gian học và nghỉ, các kỹ năng cần luyện (từ vựng, ngữ pháp, nghe, nói, đọc, viết)."</div>
-                        <div class="prompt-col-eval"><b>Đánh giá:</b> Kế hoạch chi tiết hơn, đã biết chia nhỏ lộ trình theo tuần nhưng thông tin hiển thị còn dài dòng, chưa phân chia hộc thời gian nghỉ ngơi khoa học.</div>
+                        <div class="prompt-col-eval"><b>Đánh giá:</b> Có chia lộ trình theo tuần nhưng thông tin quá dài, chưa thiết lập các khoảng nghỉ giải lao khoa học để giữ sức học.</div>
                     </div>
                     <div class="prompt-column highlighted">
                         <div class="prompt-col-title">✦ Prompt Nâng cao (CLEAR)</div>
                         <div class="prompt-col-text">"Bạn là một gia sư TOPIK hoặc giáo viên giảng dạy môn tiếng Hàn đang hướng dẫn sinh viên Việt Nam tự học tiếng Hàn. Hãy xây dựng kế hoạch học TOPIK trong 3 tháng cho sinh viên của bạn đang ở trình độ sơ cấp, muốn đạt TOPIK 2, còn bận học trên trường vào buổi chiều từ 12h đến 19h00 chỉ có khoảng 2-3 tiếng học mỗi ngày để học. Trong kế hoạch đó, bao gồm: đưa ra mục tiêu học tập từng tuần, chia kế hoạch theo từng tuần chi tiết, phân bổ thời gian hợp lý cho các kỹ năng từ vựng ngữ pháp, nghe, nói, đọc, viết. Sau đó đưa ra phương pháp kiểm tra và đánh giá tiến độ sau mỗi tuần, và từ đó nêu ra giải pháp để cải thiện. Chú ý trình bày theo dạng bảng để dễ theo dõi."</div>
-                        <div class="prompt-col-eval"><b>Đánh giá:</b> Bạn AI trả về một bảng lộ trình Markdown vô cùng xuất sắc. Chia nhỏ mục tiêu cụ thể 2.5 tiếng mỗi tối, xen kẽ giải lao 15 phút, kèm các bài test kiểm tra năng lực cuối tuần cực xịn.</div>
+                        <div class="prompt-col-eval"><b>Đánh giá:</b> Kế hoạch dạng bảng rõ ràng, phân rã thời gian học chi tiết đến từng phút kết hợp thời gian nghỉ ngơi khoa học giúp học tập thoải mái nhất.</div>
                     </div>
                 </div>
             `,
@@ -2157,17 +2235,17 @@
                     <div class="prompt-column">
                         <div class="prompt-col-title">Prompt Cơ bản</div>
                         <div class="prompt-col-text">"Hãy tạo đề kiểm tra và đáp án để chấm điểm."</div>
-                        <div class="prompt-col-eval"><b>Đánh giá:</b> Bạn AI cho ra một đề thi siêu ngắn (5 câu trắc nghiệm đơn giản), chẳng đủ để đánh giá năng lực học tập thực tế gì cả.</div>
+                        <div class="prompt-col-eval"><b>Đánh giá:</b> Trả về đề thi quá ngắn (chỉ 5 câu hỏi đơn sơ), không bao phủ hết kiến thức đã học.</div>
                     </div>
                     <div class="prompt-column">
                         <div class="prompt-col-title">Prompt Cải tiến</div>
                         <div class="prompt-col-text">"Hãy tạo một đề kiểm tra tiếng Hàn dành cho sinh viên năm nhất đang ở trình độ sơ cấp. Đề kiểm tra gồm 12 câu trắc nghiệm và 5 câu tự luận. Sau đó cung cấp đáp án và đưa ra tiêu chí chấm điểm chi tiết cho từng phần."</div>
-                        <div class="prompt-col-eval"><b>Đánh giá:</b> Đề thi có số lượng câu hỏi đúng chuẩn hơn, nhưng tiêu chí chấm phần tự luận còn khá mơ hồ, khó dùng để tự chấm điểm chéo cho nhau.</div>
+                        <div class="prompt-col-eval"><b>Đánh giá:</b> Đề bài có độ dài ổn định nhưng tiêu chuẩn chấm tự luận còn sơ sài, khó dùng chấm chéo chuẩn xác.</div>
                     </div>
                     <div class="prompt-column highlighted">
                         <div class="prompt-col-title">✦ Prompt Nâng cao (CLEAR)</div>
                         <div class="prompt-col-text">"Bạn là giảng viên tiếng Hàn tại một trường đại học. Bạn hãy thiết kế một đề kiểm tra thường xuyên đánh giá kỹ năng tiếng Hàn cho sinh viên trình độ sơ cấp với 12 câu trắc nghiệm (bao gồm 4 chọn từ khác loại, 6 câu điền từ thích hợp – kiểm tra cả từ vựng và ngữ pháp, 2 câu chọn lỗi sai và sửa), 5 câu tự luận (bao gồm 2 câu viết lại câu dựa trên các từ gợi ý, 2 câu sắp xếp câu và 1 câu viết đoạn văn 200 chữ với chủ đề giới thiệu sở thích của bản thân. Sau đó, cung cấp đáp án chi tiết, thiết kế tiêu chí chấm điểm từng phần và giải thích cụ thể cách chấm về độ chính xác, vốn từ, ngữ pháp, khả năng diễn đạt, cách trình bày. Đồng thời đề thi được phân loại rõ ràng theo 4 mức độ: nhận biết, thông hiểu, vận dụng và vận dụng cao, cách trình bày chuyên nghiệp, như một đề thi chính thức."</div>
-                        <div class="prompt-col-eval"><b>Đánh giá:</b> Bạn AI cho ra một đề kiểm tra chuẩn chỉnh đúng phong cách trường đại học. Có phân chia nhận biết - thông hiểu, kèm bảng biểu điểm rubrics chấm tự luận vô cùng cụ thể.</div>
+                        <div class="prompt-col-eval"><b>Đánh giá:</b> Đề thi hoàn thiện xuất sắc phân hóa rõ nét 4 mức độ tư duy, bảng biểu điểm rubrics chấm thi chi tiết và toàn diện.</div>
                     </div>
                 </div>
             `
@@ -2202,7 +2280,7 @@
             },
             {
                 title: "Slide 4: Konglish là cầu nối văn hóa gần gũi",
-                content: "<ul><li><b>Xóa nhòa khoảng cách:</b> Konglish và từ lóng đời mới giúp giảm bớt tính trang trọng quá mức (Formality) của ngữ pháp tiếng Hàn cổ, giúp các bạn nước ngoài học tiếng Hàn dễ dàng hòa nhập nhanh chóng.</li><li><b>Tự do phát triển:</b> Việc chấp nhận từ ngoại lai phản ánh tư duy cởi mở, linh hoạt và sự vận động không ngừng của ngôn ngữ trong đời sống hiện đại.</li></ul>"
+                content: "<ul><li><b>Xóa nhòa khoảng cách:</b> Konglish và từ lóng đời mới giúp giảm bớt tính trang trọng quá mức (Formality) của tiếng Hàn cổ, giúp các bạn nước ngoài học tiếng Hàn dễ dàng hòa nhập nhanh chóng.</li><li><b>Tự do phát triển:</b> Việc chấp nhận từ ngoại lai phản ánh tư duy cởi mở, linh hoạt và sự vận động không ngừng của ngôn ngữ trong đời sống hiện đại.</li></ul>"
             },
             {
                 title: "Slide 5: Những rào cản và xung đột nhỏ",
