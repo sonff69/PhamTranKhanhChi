@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Phạm Trần Khánh Chi Portfolio</title>
+    <title>Phạm Trần Khánh Chi - Nhật Ký Hành Trình Số</title>
     <!-- Google Fonts hỗ trợ tiếng Việt mượt mà -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,13 +13,13 @@
     
     <style>
         :root {
-            --bg-color: #070b15;
+            --bg-color: #060913;
             --primary-light: #bda6ff;
-            --primary-dark: #583cd4;
+            --primary-dark: #5034c4;
             --accent-warm: #ffe599;
             --text-light: #f4f6fa;
-            --text-muted: #8d98b3;
-            --glass-bg: rgba(12, 18, 36, 0.75);
+            --text-muted: #8c97b0;
+            --glass-bg: rgba(11, 17, 34, 0.75);
             --glass-border: rgba(255, 255, 255, 0.08);
             --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
         }
@@ -44,7 +44,7 @@
             line-height: 1.6;
         }
 
-        /* Canvas bụi sao chuyển động mộng mơ */
+        /* Canvas bụi sao chuyển động */
         #star-canvas {
             position: fixed;
             top: 0;
@@ -61,7 +61,7 @@
             top: 0;
             width: 100%;
             z-index: 1000;
-            background: rgba(7, 11, 21, 0.8);
+            background: rgba(6, 9, 19, 0.8);
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
             border-bottom: 1px solid var(--glass-border);
@@ -119,7 +119,7 @@
         }
 
         .btn-drive {
-            background: linear-gradient(135deg, rgba(88, 60, 212, 0.3), rgba(189, 166, 255, 0.3));
+            background: linear-gradient(135deg, rgba(80, 52, 196, 0.3), rgba(189, 166, 255, 0.3));
             border: 1px solid rgba(189, 166, 255, 0.4);
             color: var(--text-light) !important;
             padding: 8px 18px;
@@ -129,14 +129,14 @@
             align-items: center;
             gap: 8px;
             transition: var(--transition) !important;
-            box-shadow: 0 4px 15px rgba(88, 60, 212, 0.15);
+            box-shadow: 0 4px 15px rgba(80, 52, 196, 0.15);
         }
 
         .btn-drive:hover {
-            background: linear-gradient(135deg, rgba(88, 60, 212, 0.6), rgba(189, 166, 255, 0.6));
+            background: linear-gradient(135deg, rgba(80, 52, 196, 0.6), rgba(189, 166, 255, 0.6));
             border-color: var(--primary-light);
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(88, 60, 212, 0.3);
+            box-shadow: 0 6px 20px rgba(80, 52, 196, 0.3);
         }
 
         .btn-drive::after {
@@ -377,12 +377,12 @@
             gap: 12px;
             font-size: 1.05rem;
             transition: var(--transition);
-            box-shadow: 0 10px 25px rgba(88, 60, 212, 0.35);
+            box-shadow: 0 10px 25px rgba(80, 52, 196, 0.35);
         }
 
         .btn-drive-large:hover {
             transform: translateY(-3px) scale(1.02);
-            box-shadow: 0 15px 35px rgba(88, 60, 212, 0.5);
+            box-shadow: 0 15px 35px rgba(80, 52, 196, 0.5);
             filter: brightness(1.1);
         }
 
@@ -425,7 +425,7 @@
         .card:hover {
             transform: translateY(-8px);
             border-color: rgba(189, 166, 255, 0.3);
-            box-shadow: 0 15px 35px rgba(88, 60, 212, 0.15);
+            box-shadow: 0 15px 35px rgba(80, 52, 196, 0.15);
         }
 
         .card:hover::before {
@@ -634,7 +634,7 @@
         }
 
         .highlight-box {
-            background: rgba(88, 60, 212, 0.08);
+            background: rgba(80, 52, 196, 0.08);
             border-left: 4px solid var(--primary-light);
             padding: 15px 20px;
             border-radius: 0 12px 12px 0;
@@ -672,7 +672,7 @@
         }
 
         .modal-table th {
-            background: rgba(88, 60, 212, 0.15);
+            background: rgba(80, 52, 196, 0.15);
             color: var(--primary-light);
             font-weight: 600;
         }
@@ -681,7 +681,7 @@
             background: rgba(255,255,255,0.02);
         }
 
-        /* Sơ đồ cây thư mục */
+        /* Minh họa cấu trúc thư mục dạng sơ đồ cây */
         .directory-tree {
             background: #090d16;
             border: 1px solid var(--glass-border);
@@ -724,7 +724,7 @@
             color: #a6b2c9;
         }
 
-        /* Trình giả lập tệp tin Windows Explorer */
+        /* Trình giả lập tệp tin của Bài 1 */
         .explorer-sim {
             background: #0d111e;
             border: 1px solid rgba(189, 166, 255, 0.15);
@@ -802,7 +802,7 @@
         }
 
         .exp-sidebar-item.active {
-            background: rgba(88, 60, 212, 0.2);
+            background: rgba(80, 52, 196, 0.2);
             color: var(--primary-light);
         }
 
@@ -877,7 +877,7 @@
         .exp-btn.active {
             background: var(--primary-dark);
             border-color: var(--primary-light);
-            box-shadow: 0 0 10px rgba(88, 60, 212, 0.4);
+            box-shadow: 0 0 10px rgba(80, 52, 196, 0.4);
         }
 
         .exp-status-text {
@@ -959,7 +959,7 @@
         }
 
         .comp-tab.active {
-            background: rgba(88, 60, 212, 0.15);
+            background: rgba(80, 52, 196, 0.15);
             color: var(--primary-light);
             font-weight: 600;
         }
@@ -991,7 +991,7 @@
 
         .prompt-column.highlighted {
             border-color: rgba(189, 166, 255, 0.25);
-            background: rgba(88, 60, 212, 0.05);
+            background: rgba(80, 52, 196, 0.05);
         }
 
         .prompt-col-title {
@@ -1017,7 +1017,7 @@
             color: var(--text-muted);
         }
 
-        /* Timeline dọc họp nhóm trực tuyến */
+        /* Minh họa quá trình họp trực tuyến của Bài 4 */
         .timeline-vertical {
             margin: 30px 0;
             position: relative;
@@ -1072,7 +1072,7 @@
             line-height: 1.5;
         }
 
-        /* Slide previewer giả lập */
+        /* Bộ xem slide giả lập cho Bài 5 */
         .slide-previewer {
             background: #0c111d;
             border: 1px solid var(--glass-border);
@@ -1178,7 +1178,7 @@
             font-weight: 500;
         }
 
-        /* Checklist tương tác */
+        /* Bộ nút check-list tương tác Bài 6 */
         .ethical-checklist {
             margin: 20px 0;
             display: flex;
@@ -1231,6 +1231,25 @@
             margin: 0;
             line-height: 1.5;
         }
+
+        @media (max-width: 900px) {
+            .hero-container {
+                grid-template-columns: 1fr;
+                gap: 30px;
+                padding: 30px;
+            }
+            .hero-avatar-wrapper::before {
+                width: 220px;
+                height: 220px;
+            }
+            .hero-avatar {
+                width: 190px;
+                height: 190px;
+            }
+            .hero-info h1 {
+                font-size: 2.2rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -1259,9 +1278,9 @@
             <div class="hero-info">
                 <span class="tag">Digital Portfolio</span>
                 <h1>Phạm Trần Khánh Chi</h1>
-                <p class="hero-subtitle">Sinh viên ngành Ngôn ngữ & Văn hóa Hàn Quốc</p>
+                <p class="hero-subtitle">Sinh viên chuyên ngành Ngôn ngữ & Văn hóa Hàn Quốc</p>
                 <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.7;">
-                    Chào cậu, mình là Khánh Chi — một cô bạn học ngôn ngữ đang dạo chơi trong thế giới số. Chiếc portfolio nhỏ này là nơi mình lưu lại những dấu chân học tập, những trải nghiệm thực tế khi làm quen với công cụ công nghệ thông minh trong học phần "Nhập môn công nghệ số và ứng dụng trí tuệ nhân tạo". Không có gì quá đao to búa lớn đâu, chỉ là những bài học nhỏ, những lần mò mẫm gõ lệnh và cả những kỷ niệm làm việc cùng bạn bè. Hy vọng cậu sẽ tìm thấy chút niềm vui khi ghé chơi ở đây nhé!
+                    Chào quý thầy cô và các bạn, mình là Khánh Chi — một người đang trên hành trình kết nối ngôn ngữ xứ Hàn và thế giới công nghệ số đầy màu sắc. Đây là không gian học thuật lưu giữ những trải nghiệm, sản phẩm thực tế tự tay mình hoàn thiện trong học phần "Nhập môn công nghệ số và ứng dụng trí tuệ nhân tạo".
                 </p>
                 <div class="hero-meta">
                     <div><i class="fa-solid fa-id-card"></i> MSSV: 25042379</div>
@@ -1275,19 +1294,19 @@
 
     <div class="objectives-section">
         <div class="objectives-container">
-            <h3><i class="fa-solid fa-compass"></i> Tại sao mình tạo chiếc Portfolio này?</h3>
+            <h3><i class="fa-solid fa-compass"></i> Mục tiêu học thuật của Portfolio</h3>
             <div class="objectives-grid">
                 <div class="obj-card">
-                    <h4><i class="fa-solid fa-cube"></i> Gom góp kiến thức gọn gàng</h4>
-                    <p>Để lưu giữ lại một cách ngăn nắp mọi kiến thức hữu ích, các kỹ năng số và những trải nghiệm thực tế cùng AI mà mình đã có được trong suốt học phần.</p>
+                    <h4><i class="fa-solid fa-cube"></i> Hệ thống hóa kiến thức</h4>
+                    <p>Hợp nhất và trực quan hóa toàn bộ tiến trình học tập, rèn luyện kỹ năng số và phát triển giải pháp trí tuệ nhân tạo đã tích lũy trong học phần.</p>
                 </div>
                 <div class="obj-card">
-                    <h4><i class="fa-solid fa-seedling"></i> Trân trọng những nỗ lực</h4>
-                    <p>Mỗi bài tập thực hành đều là những nỗ lực tìm tòi, thử nghiệm của bản thân. Portfolio này giúp mình tự tin hơn vào năng lực xử lý công việc thực tế.</p>
+                    <h4><i class="fa-solid fa-seedling"></i> Khẳng định năng lực thực tiễn</h4>
+                    <p>Chuyển hóa các bài tập thực hành thành ma trận sản phẩm chất lượng cao, có khả năng tương tác trực quan để minh chứng năng lực tư duy số.</p>
                 </div>
                 <div class="obj-card">
-                    <h4><i class="fa-solid fa-shoe-prints"></i> Gieo hạt mầm tương lai</h4>
-                    <p>Xây dựng một góc lưu trữ kỹ năng số thật chỉn chu để làm bàn đạp cho công việc nghiên cứu ngôn ngữ cũng như hoạt động biên phiên dịch sau này.</p>
+                    <h4><i class="fa-solid fa-shoe-prints"></i> Tạo dựng dấu ấn nghề nghiệp</h4>
+                    <p>Kiến tạo dấu ấn số cá nhân chuyên nghiệp, tạo đòn bẩy vững chắc phục vụ cho chặng đường nghiên cứu và hoạt động biên phiên dịch trong tương lai.</p>
                 </div>
             </div>
         </div>
@@ -1296,12 +1315,12 @@
     <section id="portfolio">
         <div class="section-header">
             <h2>Hành trình Số hóa Học thuật</h2>
-            <p>Tuyển tập các bài thực hành học thuật mà mình đã tự tay hoàn thiện trong học phần này.</p>
+            <p>Hệ thống 6 bài tập cốt lõi được xây dựng công phu, đúng với yêu cầu chương trình đào tạo chính quy.</p>
         </div>
 
         <div class="mid-action-bar">
             <a href="https://drive.google.com/drive/folders/1rDP6xFW3w6_o-1dmljktwoEFeIbrhL7m?usp=drive_link" target="_blank" class="btn-drive-large">
-                <i class="fa-brands fa-google-drive"></i> Ghé thăm thư mục bài tập của mình trên GG Drive
+                <i class="fa-brands fa-google-drive"></i> Xem tài liệu gốc trên Google Drive
             </a>
         </div>
 
@@ -1312,11 +1331,11 @@
                     <div class="card-icon"><i class="fa-solid fa-folder-open"></i></div>
                     <span class="card-num">Bài thực hành 1</span>
                     <h3 class="card-title">Bài 1 - Bài tập 1 của mục 1.4: Thao tác cơ bản với tệp tin và thư mục</h3>
-                    <p class="card-desc">Cùng mình dọn dẹp và sắp xếp lại "ngôi nhà số" thật gọn gàng, ngăn nắp theo cấu trúc cây thư mục khoa học kèm bộ giả lập 12 bước siêu sinh động nhé.</p>
+                    <p class="card-desc">Thiết lập cấu trúc thư mục tối ưu của hệ điều hành và quy tắc đặt tên khoa học kèm sơ đồ cây hệ thống và trình giả lập tương tác 12 bước chân thực.</p>
                 </div>
                 <div class="card-bottom">
                     <span class="card-tag">Hệ thống tệp Windows</span>
-                    <button class="card-btn">Xem chi tiết <i class="fa-solid fa-arrow-right"></i></button>
+                    <button class="card-btn">Chi tiết <i class="fa-solid fa-arrow-right"></i></button>
                 </div>
             </div>
 
@@ -1326,11 +1345,11 @@
                     <div class="card-icon"><i class="fa-solid fa-graduation-cap"></i></div>
                     <span class="card-num">Bài thực hành 2</span>
                     <h3 class="card-title">Bài 2 - Bài tập 2 của mục 2.4: Tìm kiếm và đánh giá thông tin học thuật</h3>
-                    <p class="card-desc">Hành trình lặn lội tìm kiếm, gạn lọc thông tin khoa học từ 11 bài nghiên cứu đầu ngành về rào cản từ mượn tiếng Anh (Konglish) trong tiếng Hàn.</p>
+                    <p class="card-desc">Khảo sát, khai thác cơ sở dữ liệu chuyên ngành và phân tích, thẩm định chi tiết 11 bài báo khoa học về đề tài rào cản dịch thuật Konglish.</p>
                 </div>
                 <div class="card-bottom">
                     <span class="card-tag">Khai thác thông tin</span>
-                    <button class="card-btn">Xem chi tiết <i class="fa-solid fa-arrow-right"></i></button>
+                    <button class="card-btn">Chi tiết <i class="fa-solid fa-arrow-right"></i></button>
                 </div>
             </div>
 
@@ -1340,11 +1359,11 @@
                     <div class="card-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
                     <span class="card-num">Bài thực hành 3</span>
                     <h3 class="card-title">Bài 3 - Bài tập 2 của mục 3.4: Viết Prompt hiệu quả cho các tác vụ học tập</h3>
-                    <p class="card-desc">Trò chuyện thông minh cùng AI thông qua nghệ thuật đặt câu lệnh 3 cấp độ để giải quyết nhẹ nhàng bài toán ôn thi và biên soạn đề kiểm tra.</p>
+                    <p class="card-desc">Thiết kế hệ thống câu lệnh 3 cấp độ tối ưu hóa hiệu quả các tác vụ dịch thuật, lập kế hoạch ôn tập TOPIK 2 và soạn đề kiểm tra tiếng Hàn.</p>
                 </div>
                 <div class="card-bottom">
                     <span class="card-tag">Prompt Engineering</span>
-                    <button class="card-btn">Xem chi tiết <i class="fa-solid fa-arrow-right"></i></button>
+                    <button class="card-btn">Chi tiết <i class="fa-solid fa-arrow-right"></i></button>
                 </div>
             </div>
 
@@ -1354,11 +1373,11 @@
                     <div class="card-icon"><i class="fa-solid fa-users-viewfinder"></i></div>
                     <span class="card-num">Bài thực hành 4</span>
                     <h3 class="card-title">Bài 4 - Bài tập 3 của mục 4.4: Sử dụng công cụ họp trực tuyến cho dự án nhóm</h3>
-                    <p class="card-desc">Cùng Nhóm 35 tổ chức một cuộc họp trực tuyến 30 phút thật sôi nổi để chuẩn bị cho bài thuyết trình về từ vựng tiếng Hàn sơ cấp.</p>
+                    <p class="card-desc">Tổ chức và điều phối họp Google Meet Nhóm 35 thực hành tổng duyệt thuyết trình từ vựng tiếng Hàn sơ cấp kèm tiến trình động 30 phút chi tiết.</p>
                 </div>
                 <div class="card-bottom">
                     <span class="card-tag">Hợp tác trực tuyến</span>
-                    <button class="card-btn">Xem chi tiết <i class="fa-solid fa-arrow-right"></i></button>
+                    <button class="card-btn">Chi tiết <i class="fa-solid fa-arrow-right"></i></button>
                 </div>
             </div>
 
@@ -1368,11 +1387,11 @@
                     <div class="card-icon"><i class="fa-solid fa-photo-film"></i></div>
                     <span class="card-num">Bài thực hành 5</span>
                     <h3 class="card-title">Bài 5 - Bài tập 2 của mục 5.4: Sử dụng AI tạo sinh để hỗ trợ sáng tạo nội dung</h3>
-                    <p class="card-desc">Nơi mình và AI cùng vẽ nên câu chuyện về Konglish và tiếng lóng của thế hệ Alpha. Nhấp xem slide để dạo chơi với tụi mình nha!</p>
+                    <p class="card-desc">Phát triển ý tưởng từ vựng Konglish và tiếng lóng Alpha qua bài thuyết trình học thuật 7 slides phân tích chiều sâu kèm trình duyệt slide ảo.</p>
                 </div>
                 <div class="card-bottom">
                     <span class="card-tag">Generative AI & Design</span>
-                    <button class="card-btn">Xem chi tiết <i class="fa-solid fa-arrow-right"></i></button>
+                    <button class="card-btn">Chi tiết <i class="fa-solid fa-arrow-right"></i></button>
                 </div>
             </div>
 
@@ -1382,11 +1401,11 @@
                     <div class="card-icon"><i class="fa-solid fa-scale-balanced"></i></div>
                     <span class="card-num">Bài thực hành 6</span>
                     <h3 class="card-title">Bài 6 - Bài tập 4 của mục 6.4: Sử dụng AI có trách nhiệm trong học tập và nghiên cứu</h3>
-                    <p class="card-desc">Công nghệ rất tuyệt, nhưng sự trung thực còn tuyệt vời hơn. Cùng mình khám phá những nguyên tắc ứng xử văn minh và đạo đức khi dùng AI.</p>
+                    <p class="card-desc">Phân tích đạo đức học thuật, xác định ranh giới hỗ trợ và xây dựng bộ checklist tương tác 5 nguyên tắc ứng dụng AI tự lực.</p>
                 </div>
                 <div class="card-bottom">
                     <span class="card-tag">Đạo đức số</span>
-                    <button class="card-btn">Xem chi tiết <i class="fa-solid fa-arrow-right"></i></button>
+                    <button class="card-btn">Chi tiết <i class="fa-solid fa-arrow-right"></i></button>
                 </div>
             </div>
         </div>
@@ -1395,27 +1414,27 @@
     <section id="reflection">
         <div class="section-header">
             <h2>Góc nhìn sau Hành trình</h2>
-            <p>Những chia sẻ mộc mạc của mình về các thuận lợi, thử thách và bài học giá trị thu nhận được từ học phần.</p>
+            <p>Nhìn nhận nghiêm túc về những thuận lợi, thử thách và bài học giá trị thu nhận được từ học phần.</p>
         </div>
 
         <div class="reflection-container">
             <div class="reflection-grid">
                 <div class="reflection-block">
-                    <h4><i class="fa-solid fa-heart"></i> May mắn mỉm cười</h4>
+                    <h4><i class="fa-solid fa-heart"></i> Thuận lợi gặt hái</h4>
                     <p>
-                        Mình cảm thấy rất may mắn khi được học tập trong một môi trường cởi mở, có sự đồng hành của thầy cô và bạn bè. Sự phát triển mạnh mẽ của công nghệ cũng giúp một sinh viên học ngoại ngữ như mình có thêm những công cụ thông minh để tra cứu từ vựng và tối ưu hóa thời gian tự học.
+                        Môi trường học tập cởi mở, kết hợp các công cụ trực quan hiện đại giúp mình dễ dàng tiếp cận công nghệ số. Sự phát triển mạnh mẽ của các mô hình ngôn ngữ lớn (LLM) hỗ trợ rất nhiều cho việc tối ưu các tác vụ nghiên cứu ngôn ngữ, biên soạn từ điển và phân tích ngữ cảnh học thuật.
                     </p>
                 </div>
                 <div class="reflection-block">
-                    <h4><i class="fa-solid fa-triangle-exclamation"></i> Chút bối rối lúc đầu</h4>
+                    <h4><i class="fa-solid fa-triangle-exclamation"></i> Khó khăn đối mặt</h4>
                     <p>
-                        Là một cô nàng học ngôn ngữ vốn quen với câu chữ, ban đầu mình đã thấy khá bỡ ngỡ khi tiếp xúc với các thuật ngữ công nghệ khô khan hay cách thiết lập prompt chính xác. Đôi khi, việc gạn lọc thông tin đúng đắn giữa vô vàn tài liệu trên mạng cũng làm mình mất khá nhiều thời gian để kiểm chứng.
+                        Ban đầu, việc tiếp xúc với các khái niệm kỹ thuật và việc thiết kế prompt chính xác tương đối xa lạ với một sinh viên ngành ngôn ngữ. Đồng thời, việc đối mặt với cạm bẫy "ảo giác AI" và việc kiểm chứng tính chính xác của các tài liệu Konglish thế hệ mới đòi hỏi quá trình chọn lọc, thẩm định thông tin nghiêm ngặt hơn rất nhiều.
                     </p>
                 </div>
                 <div class="reflection-block">
-                    <h4><i class="fa-solid fa-bookmark"></i> Gói mang về những bài học</h4>
+                    <h4><i class="fa-solid fa-bookmark"></i> Bài học kinh nghiệm</h4>
                     <p>
-                        Bài học lớn nhất mình rút ra là: công nghệ chỉ là người bạn đồng hành hữu ích khi chúng ta làm chủ cuộc chơi. Một bộ óc biết suy nghĩ độc lập và một trái tim trung thực với chính kiến thức mình làm ra mới là chìa khóa giúp chúng ta tiến xa hơn trên con đường dịch thuật chuyên nghiệp sau này.
+                        Ứng dụng công nghệ không có nghĩa là phó thác hoàn toàn cho máy móc mà là biết cách biến AI thành một người trợ lý đắc lực. Tư duy phản biện và liêm chính học thuật mới là yếu tố cốt lõi quyết định giá trị của một sản phẩm nghiên cứu, giúp sinh viên biên phiên dịch khẳng định bản lĩnh cá nhân trong kỷ nguyên số.
                     </p>
                 </div>
             </div>
@@ -1511,23 +1530,23 @@
         /* DATA & INTERACTIVE ILLUSTRATIONS */
         const assignmentsData = {
             bai1: `
-                <h3>Bài 1 - Thao tác cơ bản với tệp tin và thư mục</h3>
-                <span class="tag">Quản trị tệp tin</span>
+                <h3>Góc nhỏ ngăn nắp: Làm quen với tệp tin và thư mục</h3>
+                <span class="tag">Bài tập 1 của mục 1.4</span>
                 
-                <h4><i class="fa-solid fa-bullseye"></i> Mình muốn hướng tới điều gì?</h4>
-                <p>Nhiều khi chúng mình cứ nghĩ tạo thư mục hay lưu file là chuyện siêu dễ đúng không? Nhưng khi bắt tay vào sắp xếp mọi thứ khoa học theo sơ đồ cây và đổi tên tiếng Việt không dấu chuẩn xác, mình mới nhận ra điều này quan trọng như thế nào để phục vụ cho các dự án nhóm lớn hơn.</p>
+                <h4><i class="fa-solid fa-bullseye"></i> Mục tiêu nhỏ của mình</h4>
+                <p>Giúp mình biết cách sắp xếp đống tài liệu học tập sao cho khoa học nhất trên máy tính. Mình tập tành đặt tên thư mục không dấu sao cho dễ tìm, và thử làm một sơ đồ tệp tin gọn gàng để sau này lục lại bài học không phải bối rối đi tìm nữa.</p>
 
-                <h4><i class="fa-solid fa-sitemap"></i> Bản đồ 'ngôi nhà số' nhỏ gọn của mình</h4>
+                <h4><i class="fa-solid fa-sitemap"></i> Bản đồ thư mục mình đã dựng</h4>
                 <div class="directory-tree">
-                    <div class="tree-node root"><i class="fa-solid fa-hard-drive"></i> New Volume (D:)</div>
-                    <div class="tree-node"><i class="fa-solid fa-folder-open" style="color:#ffe599;"></i> THUCHANH_PhamTranKhanhChi (Thư mục chính)</div>
-                    <div class="tree-node" style="margin-left: 40px;"><i class="fa-solid fa-folder" style="color:#ffe599;"></i> TaiLieu (Thư mục con)</div>
-                    <div class="tree-node file" style="margin-left: 60px;"><i class="fa-solid fa-file-lines"></i> GhiChuQuanTrong.txt (Bản sao tệp - Khôi phục từ thùng rác)</div>
-                    <div class="tree-node file" style="margin-left: 60px; text-decoration: line-through; opacity: 0.5;"><i class="fa-solid fa-file-circle-xmark"></i> DiChuyen.txt (Đã xóa vĩnh viễn bằng Shift+Delete)</div>
+                    <div class="tree-node root"><i class="fa-solid fa-hard-drive"></i> Ổ đĩa học tập New Volume (D:)</div>
+                    <div class="tree-node"><i class="fa-solid fa-folder-open" style="color:#ffe599;"></i> THUCHANH_PhamTranKhanhChi (Ngôi nhà lớn chứa tất cả bài tập)</div>
+                    <div class="tree-node" style="margin-left: 40px;"><i class="fa-solid fa-folder" style="color:#ffe599;"></i> TaiLieu (Nơi mình gom góp tư liệu)</div>
+                    <div class="tree-node file" style="margin-left: 60px;"><i class="fa-solid fa-file-lines"></i> GhiChuQuanTrong.txt (Tệp ghi chú nhỏ xinh sau khi khôi phục từ thùng rác)</div>
+                    <div class="tree-node file" style="margin-left: 60px; text-decoration: line-through; opacity: 0.5;"><i class="fa-solid fa-file-circle-xmark"></i> DiChuyen.txt (File nháp mình đã nhấn Shift + Delete bay màu vĩnh viễn)</div>
                 </div>
 
-                <h4><i class="fa-solid fa-desktop"></i> Thử tài quản lý file cùng mình nhé</h4>
-                <p class="info-text">Nhấp vào từng bước bên dưới để xem sự thay đổi thực tế diễn ra như thế nào nha:</p>
+                <h4><i class="fa-solid fa-desktop"></i> Cùng thử nghiệm thao tác tệp tin nhé!</h4>
+                <p class="info-text">Nhấp chạy từng bước để xem tệp tin trong máy mình di chuyển và biến đổi thế nào nè:</p>
                 
                 <div class="explorer-sim">
                     <div class="exp-header">
@@ -1536,82 +1555,82 @@
                             <span class="exp-dot yellow"></span>
                             <span class="exp-dot green"></span>
                         </div>
-                        <div class="exp-title"><i class="fa-solid fa-folder-closed"></i> Windows Explorer Simulator</div>
+                        <div class="exp-title"><i class="fa-solid fa-folder-closed"></i> Trình giả lập thư mục</div>
                     </div>
                     <div class="exp-address-bar" id="exp-address-text">This PC</div>
                     <div class="exp-body">
                         <div class="exp-sidebar">
-                            <div class="exp-sidebar-item active" id="exp-side-pc"><i class="fa-solid fa-computer"></i> This PC</div>
-                            <div class="exp-sidebar-item" id="exp-side-d"><i class="fa-solid fa-hard-drive"></i> New Volume (D:)</div>
-                            <div class="exp-sidebar-item" id="exp-side-bin"><i class="fa-solid fa-trash-can"></i> Recycle Bin</div>
+                            <div class="exp-sidebar-item active" id="exp-side-pc"><i class="fa-solid fa-computer"></i> Máy tính của mình</div>
+                            <div class="exp-sidebar-item" id="exp-side-d"><i class="fa-solid fa-hard-drive"></i> Ổ học tập (D:)</div>
+                            <div class="exp-sidebar-item" id="exp-side-bin"><i class="fa-solid fa-trash-can"></i> Sọt rác</div>
                         </div>
                         <div class="exp-main-view" id="exp-main-view-container">
                             <div class="exp-grid" id="exp-grid-content">
                                 <div class="exp-item folder" onclick="setExpStep(2)">
                                     <i class="fa-solid fa-hard-drive" style="color: #4a90e2;"></i>
-                                    <span>New Volume (D:)</span>
+                                    <span>Ổ đĩa học tập (D:)</span>
                                 </div>
                                 <div class="exp-item folder">
                                     <i class="fa-solid fa-hard-drive" style="color: #a6b2c9;"></i>
-                                    <span>Local Disk (C:)</span>
+                                    <span>Ổ hệ thống (C:)</span>
                                 </div>
                             </div>
                             <div class="exp-alert" id="exp-alert-box">
-                                <div class="exp-alert-title">Xác nhận xóa vĩnh viễn tệp</div>
-                                <div class="exp-alert-desc">Bạn có chắc chắn muốn xóa vĩnh viễn tệp 'DiChuyen.txt' không? Thao tác này sẽ không thể hoàn tác đâu nhé.</div>
+                                <div class="exp-alert-title">Xóa vĩnh viễn tệp luôn nha?</div>
+                                <div class="exp-alert-desc">Bạn có chắc chắn muốn xóa vĩnh viễn 'DiChuyen.txt' không? Xóa xong là không tìm lại được ở Sọt rác đâu đó!</div>
                                 <div class="exp-alert-btns">
-                                    <button class="exp-alert-btn confirm" onclick="confirmShiftDelete()">Đồng ý (Yes)</button>
-                                    <button class="exp-alert-btn cancel" onclick="cancelShiftDelete()">Bỏ qua (No)</button>
+                                    <button class="exp-alert-btn confirm" onclick="confirmShiftDelete()">Xác nhận xóa</button>
+                                    <button class="exp-alert-btn cancel" onclick="cancelShiftDelete()">Bỏ qua</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="exp-control-panel">
-                        <div class="exp-status-text" id="exp-status-msg">Hãy chọn "Bước 1" để bắt đầu trải nghiệm quy trình.</div>
+                        <div class="exp-status-text" id="exp-status-msg">Hãy chọn "Bước 1" để xem quá trình diễn ra thế nào nha.</div>
                         <div class="exp-btn-grid">
-                            <button class="exp-btn" id="btn-step-1" onclick="setExpStep(1)">1. Mở Explorer</button>
-                            <button class="exp-btn" id="btn-step-2" onclick="setExpStep(2)">2. Truy cập ổ D:</button>
-                            <button class="exp-btn" id="btn-step-3" onclick="setExpStep(3)">3. Tạo thư mục học tập</button>
-                            <button class="exp-btn" id="btn-step-4" onclick="setExpStep(4)">4. Mở thư mục gốc</button>
-                            <button class="exp-btn" id="btn-step-5" onclick="setExpStep(5)">5. Tạo GhiChu.txt</button>
-                            <button class="exp-btn" id="btn-step-6" onclick="setExpStep(6)">6. Đổi tên tệp</button>
-                            <button class="exp-btn" id="btn-step-7" onclick="setExpStep(7)">7. Tạo thư mục con</button>
-                            <button class="exp-btn" id="btn-step-8" onclick="setExpStep(8)">8. Copy tệp (Ctrl+C & V)</button>
-                            <button class="exp-btn" id="btn-step-9" onclick="setExpStep(9)">9. Di chuyển DiChuyen.txt</button>
-                            <button class="exp-btn" id="btn-step-10" onclick="setExpStep(10)">10. Xóa tệp gốc</button>
+                            <button class="exp-btn" id="btn-step-1" onclick="setExpStep(1)">1. Mở File Explorer</button>
+                            <button class="exp-btn" id="btn-step-2" onclick="setExpStep(2)">2. Ghé vào ổ D:</button>
+                            <button class="exp-btn" id="btn-step-3" onclick="setExpStep(3)">3. Tạo nhà mới</button>
+                            <button class="exp-btn" id="btn-step-4" onclick="setExpStep(4)">4. Mở cửa đi vào</button>
+                            <button class="exp-btn" id="btn-step-5" onclick="setExpStep(5)">5. Viết GhiChu.txt</button>
+                            <button class="exp-btn" id="btn-step-6" onclick="setExpStep(6)">6. Đổi tên cho file</button>
+                            <button class="exp-btn" id="btn-step-7" onclick="setExpStep(7)">7. Tạo hộc chứa phụ</button>
+                            <button class="exp-btn" id="btn-step-8" onclick="setExpStep(8)">8. Sao chép tệp</button>
+                            <button class="exp-btn" id="btn-step-9" onclick="setExpStep(9)">9. Dọn file DiChuyen</button>
+                            <button class="exp-btn" id="btn-step-10" onclick="setExpStep(10)">10. Xóa tệp thừa</button>
                             <button class="exp-btn" id="btn-step-11" onclick="setExpStep(11)">11. Xóa vĩnh viễn</button>
-                            <button class="exp-btn" id="btn-step-12" onclick="setExpStep(12)">12. Khôi phục từ rác</button>
+                            <button class="exp-btn" id="btn-step-12" onclick="setExpStep(12)">12. Cứu tệp từ sọt rác</button>
                         </div>
                     </div>
                 </div>
 
-                <h4><i class="fa-solid fa-rectangle-list"></i> Tóm tắt quy trình 12 bước hành động</h4>
+                <h4><i class="fa-solid fa-rectangle-list"></i> Kịch bản 12 bước mình đã làm qua:</h4>
                 <ol>
-                    <li><b>Bước 1:</b> Mở nhanh File Explorer bằng tổ hợp phím <code>Windows + E</code> quen thuộc.</li>
-                    <li><b>Bước 2:</b> Vào ổ đĩa học tập độc lập <code>New Volume (D:)</code> để bảo vệ dữ liệu gốc tốt hơn.</li>
-                    <li><b>Bước 3:</b> Tạo một thư mục chính mang tên mình: <code>THUCHANH_PhamTranKhanhChi</code>.</li>
-                    <li><b>Bước 4:</b> Nhấp đúp chuột để mở thư mục chính vừa tạo.</li>
-                    <li><b>Bước 5:</b> Tạo tệp tin ghi chú đầu tiên mang tên <code>GhiChu.txt</code>.</li>
-                    <li><b>Bước 6:</b> Đổi tên tệp thành <code>GhiChuQuanTrong.txt</code> bằng phím F2 cho chuyên nghiệp hơn.</li>
-                    <li><b>Bước 7:</b> Chuẩn bị một thư mục con tên là <code>TaiLieu</code> để phân cấp thông tin.</li>
-                    <li><b>Bước 8:</b> Sao chép (Copy) tệp ghi chú gốc vào thư mục con vừa tạo để làm một bản dự phòng.</li>
-                    <li><b>Bước 9:</b> Tạo tệp <code>DiChuyen.txt</code> và thực hiện di chuyển (Cut - Ctrl+X) vào bên trong thư mục con.</li>
-                    <li><b>Bước 10:</b> Tiến hành xóa tệp ghi chú gốc trong thư mục con để thử nghiệm tính năng Thùng rác.</li>
-                    <li><b>Bước 11:</b> Xóa vĩnh viễn tệp di chuyển bằng phím tắt <code>Shift + Delete</code> để dọn dẹp sạch sẽ ổ cứng.</li>
-                    <li><b>Bước 12:</b> Vào Recycle Bin trên Desktop để phục hồi tệp ghi chú về lại thư mục gốc như ban đầu.</li>
+                    <li><b>Bước 1: Mở File Explorer</b> - Mình nhấn phím tắt nhanh <code>Windows + E</code> để mở nhanh File Explorer.</li>
+                    <li><b>Bước 2: Truy cập ổ đĩa</b> - Chọn "This PC" ở cột trái, nhấp đúp chọn ổ đĩa <code>New Volume (D:)</code> để chứa tệp an toàn.</li>
+                    <li><b>Bước 3: Tạo thư mục chính</b> - Chuột phải -> New -> Folder, đặt tên <code>THUCHANH_PhamTranKhanhChi</code> viết không dấu cho chuẩn.</li>
+                    <li><b>Bước 4: Vào thư mục chính</b> - Nhấp đúp mở thư mục vừa đặt tên để chuẩn bị sắp xếp đồ đạc.</li>
+                    <li><b>Bước 5: Tạo tệp tin văn bản</b> - Chuột phải -> New -> Text Document, đặt tên <code>GhiChu.txt</code>.</li>
+                    <li><b>Bước 6: Đổi tên tệp tin</b> - Nhấp vào tệp nhấn F2, sửa tên thành <code>GhiChuQuanTrong.txt</code> để lưu ý không quên.</li>
+                    <li><b>Bước 7: Tạo thư mục con</b> - Chuột phải -> New -> Folder, đặt tên <code>TaiLieu</code> để phân loại nhỏ hơn.</li>
+                    <li><b>Bước 8: Thực hiện sao chép</b> - Chọn file <code>GhiChuQuanTrong.txt</code> nhấn Ctrl + C, chui vào <code>TaiLieu</code> nhấn Ctrl + V để dán.</li>
+                    <li><b>Bước 9: Thực hiện cắt dán</b> - Ra ngoài, tạo file <code>DiChuyen.txt</code>. Nhấn Ctrl + X (Cut), vào <code>TaiLieu</code> nhấn Ctrl + V để chuyển hẳn vào trong.</li>
+                    <li><b>Bước 10: Xóa tệp thừa</b> - Trong hộc phụ <code>TaiLieu</code>, chuột phải chọn Delete tệp <code>GhiChuQuanTrong.txt</code> để đưa tạm vào Sọt rác.</li>
+                    <li><b>Bước 11: Xóa vĩnh viễn tệp</b> - Chọn file <code>DiChuyen.txt</code>, nhấn tổ hợp phím <code>Shift + Delete</code> để xóa hẳn không qua sọt rác.</li>
+                    <li><b>Bước 12: Cứu tệp từ sọt rác</b> - Ra ngoài Desktop mở Sọt rác lên, tìm đúng tệp <code>GhiChuQuanTrong.txt</code> rồi chọn Restore để đưa em nó về chỗ cũ.</li>
                 </ol>
 
-                <h4><i class="fa-solid fa-lightbulb"></i> Bài học nhỏ cho bản thân</h4>
-                <p>Một góc làm việc ngăn nắp ngoài đời thực hay một thư mục lưu trữ số gọn gàng đều giúp chúng mình có thêm nhiều cảm hứng để sáng tạo. Làm quen với các phím tắt nhanh và biết cách phân cấp thông tin giúp mình tiết kiệm tối đa thời gian tìm kiếm tài liệu mỗi khi ôn bài.</p>
+                <h4><i class="fa-solid fa-lightbulb"></i> Bài học dễ thương mình rút ra</h4>
+                <p>Ông bà mình hay bảo "nhà sạch thì mát, bát sạch ngon cơm". Máy tính ngăn nắp thì lúc tìm bài học cực kỳ thư thái và dễ chịu. Biết dùng thêm phím tắt như Shift + Delete hay F2 giúp mình thao tác nhanh thoăn thoắt, tiết kiệm thời gian đáng kể luôn.</p>
             `,
             bai2: `
-                <h3>Bài 2 - Tìm kiếm và đánh giá thông tin học thuật</h3>
+                <h3>Bài 2 - Bài tập 2 của mục 2.4: Tìm kiếm và đánh giá thông tin học thuật</h3>
                 <span class="tag">Khai thác dữ liệu</span>
                 
-                <h4><i class="fa-solid fa-bullseye"></i> Mình muốn hướng tới điều gì?</h4>
-                <p>Mình muốn rèn luyện kỹ năng tìm kiếm thông tin khoa học thực sự đáng tin cậy trên các công cụ chuyên ngành (Google Scholar và Semantic Scholar). Từ đó xây dựng một cái nhìn đa chiều và phản biện sắc bén về đề tài từ mượn gốc Anh (Konglish) trong tiếng Hàn đương đại.</p>
+                <h4><i class="fa-solid fa-bullseye"></i> Mục tiêu nhỏ của mình</h4>
+                <p>Nghiên cứu về đề tài rào cản dịch thuật Konglish (từ mượn tiếng Anh trong tiếng Hàn) – một chủ đề siêu gần gũi với dân học tiếng Hàn tụi mình. Mình muốn học cách tìm kiếm các bài viết chất lượng trên Google Scholar và Semantic Scholar, rồi ngồi đánh giá từng bài một xem có thực sự đáng tin cậy hay không.</p>
 
-                <h4><i class="fa-solid fa-award"></i> Danh sách 11 bài nghiên cứu khoa học mình đã tìm đọc và thẩm định:</h4>
+                <h4><i class="fa-solid fa-award"></i> Bản thẩm định 11 tài liệu mình đã tìm kiếm và chọn lọc:</h4>
                 <div class="modal-table-container">
                     <table class="modal-table">
                         <thead>
@@ -1620,8 +1639,8 @@
                                 <th>Tác giả & Năm</th>
                                 <th>Tên bài báo / Cơ quan xuất bản</th>
                                 <th>Phương pháp nghiên cứu</th>
-                                <th>Cách trích dẫn</th>
-                                <th>Độ tin cậy & Giá trị ứng dụng</th>
+                                <th>Trích dẫn</th>
+                                <th>Độ tin cậy & Giá trị thực tế</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -1629,105 +1648,105 @@
                                 <td>1</td>
                                 <td>Nguyễn, T.H. (2019)</td>
                                 <td><i>Hiện tượng Konglish trong tiếng Hàn hiện đại và những lưu ý khi giảng dạy biên - phiên dịch cho sinh viên Việt Nam</i><br>Tạp chí Khoa học Ngoại ngữ, 55(3).</td>
-                                <td>Phân tích định tính kết hợp phân tích lỗi dịch thuật thực tế của người học</td>
-                                <td>Trích dẫn phong phú từ các nguồn Anh - Hàn song hành</td>
-                                <td><b>Cao.</b> Đăng trên tạp chí ngoại ngữ uy tín, hỗ trợ đắc lực làm lý thuyết sư phạm cho bài làm của mình.</td>
+                                <td>Bài tổng quan lý luận và phân tích lỗi dịch thuật</td>
+                                <td>Trích dẫn phong phú từ nguồn tài liệu Anh - Hàn song hành</td>
+                                <td><b>Cao.</b> Bài viết do tạp chí ngoại ngữ uy tín xuất bản, rất đáng tin cậy để làm khung lý thuyết nền tảng.</td>
                             </tr>
                             <tr>
                                 <td>2</td>
                                 <td>Trần, T.K.C. (2021)</td>
                                 <td><i>Phân tích xu hướng sử dụng từ mượn gốc Anh (Konglish) trên truyền hình thực tế Hàn Quốc</i><br>Tạp chí Nghiên cứu Nước ngoài, 37(2).</td>
-                                <td>Phân tích ngữ liệu thực tế từ các chương trình truyền thông ăn khách</td>
-                                <td>Trích dẫn rõ ràng, lấy ngữ liệu trực tiếp từ đời sống đại chúng</td>
-                                <td><b>Cao.</b> Rất sinh động, thích hợp làm tư liệu minh họa cho thực trạng giao tiếp hiện đại của giới trẻ Hàn.</td>
+                                <td>Khảo sát thực tế tần suất sử dụng từ ngữ từ show truyền hình thực tế</td>
+                                <td>Ngữ liệu sinh động từ chính các chương trình thực tế nổi tiếng</td>
+                                <td><b>Cao.</b> Rất lý tưởng để hiểu thực trạng dùng từ mượn trong đời sống giải trí Hàn Quốc ngày nay.</td>
                             </tr>
                             <tr>
                                 <td>3</td>
                                 <td>Lê, T.M. (2023)</td>
                                 <td><i>Các lỗi dịch thuật từ mượn tiếng Anh trong văn bản thương mại tiếng Hàn của sinh viên ngành Phiên dịch</i><br>Tạp chí Khoa học xã hội và Nhân văn, 12(4).</td>
-                                <td>Phân tích lỗi sai thực tế trên các bản dịch thương mại của sinh viên chuyên ngành</td>
-                                <td>Đối chiếu kỹ lưỡng hai chiều ngôn ngữ Hàn - Việt rõ nét</td>
-                                <td><b>Cao.</b> Thực tiễn cao, giúp mình làm rõ các thách thức cụ thể khi dịch từ mượn.</td>
+                                <td>Bóc tách lỗi sai trực tiếp trên bài dịch thương mại của sinh viên chuyên ngành</td>
+                                <td>Đối chiếu kỹ lưỡng nghĩa của từ vựng qua hai chiều Hàn - Việt</td>
+                                <td><b>Cao.</b> Bài học thực tế vô giá giúp sinh viên tụi mình biết và chủ động tránh lỗi khi làm bài dịch thương mại.</td>
                             </tr>
                             <tr>
                                 <td>4</td>
                                 <td>Phan, H.V. (2020)</td>
                                 <td><i>Ảnh hưởng của tiếng Anh bồi (Konglish) đến tư duy chuyển ngữ Hàn - Việt của sinh viên học trình độ cao cấp</i><br>VNU Journal of Science: Foreign Studies, 36(1).</td>
-                                <td>Khảo sát tư duy chuyển ngữ thực tế kết hợp phân tích định tính chuyên sâu</td>
-                                <td>Hệ thống trích dẫn học thuật quốc tế dày dặn, vững vàng</td>
-                                <td><b>Rất Cao.</b> Khung lý luận vững chắc, rất tốt để làm nền tảng phân tích tâm lý ngôn ngữ học.</td>
+                                <td>Kết hợp định tính và nghiên cứu tư duy dịch của học viên dịch thuật trình độ cao</td>
+                                <td>Hệ thống tài liệu tham khảo dịch thuật quốc tế dày dặn</td>
+                                <td><b>Rất Cao.</b> Do trường Đại học Ngoại ngữ xuất bản, lý luận sắc bén, làm điểm tựa vững chắc cho bài viết.</td>
                             </tr>
                             <tr>
                                 <td>5</td>
                                 <td>Đặng, Đ.L. (2024)</td>
                                 <td><i>Một số thách thức đối với sinh viên ngành Ngôn ngữ Hàn Quốc trong thời kỳ hội nhập ngôn ngữ toàn cầu</i><br>Tạp chí Nghiên cứu Khoa học và Phát triển Giáo dục, 22.</td>
-                                <td>Nghiên cứu thực tế đời sống kết hợp đề xuất các giải pháp vĩ mô định hướng nghề nghiệp</td>
-                                <td>Trích dẫn cập nhật xu hướng hội nhập toàn cầu mới mẻ</td>
-                                <td><b>Khá - Cao.</b> Rất tốt để phát triển phân mục kiến nghị và giải pháp học tập cho các bạn sinh viên.</td>
+                                <td>Khảo sát thực trạng học tập, đưa ra kiến nghị hướng nghiệp</td>
+                                <td>Cập nhật sát sao làn sóng hội nhập ngôn ngữ mới</td>
+                                <td><b>Khá - Cao.</b> Rất tốt để phát triển phần đề xuất các giải pháp học tập năng động cho thế hệ sinh viên tụi mình.</td>
                             </tr>
                             <tr>
                                 <td>6</td>
                                 <td>Vũ, T.A. (2018)</td>
                                 <td><i>Nghiên cứu đối chiếu từ mượn gốc Âu trong tiếng Hàn và tiếng Việt phục vụ công tác dịch thuật</i><br>Luận văn Thạc sĩ Ngôn ngữ học, Trường ĐH Ngoại ngữ - ĐHQGHN.</td>
-                                <td>Nghiên cứu đối chiếu hệ thống từ vựng song hành</td>
-                                <td>Hệ thống danh mục đối chiếu song ngữ cực kỳ dày dặn, chi tiết</td>
-                                <td><b>Trung bình - Khá.</b> Hơi cũ về tính thời sự từ vựng mới nhưng cấu trúc lý luận đối chiếu vẫn rất vững chắc.</td>
+                                <td>Nghiên cứu đối chiếu song ngữ một cách bài bản</td>
+                                <td>Hệ thống từ ngoại lai đối chiếu phong phú và tỉ mỉ</td>
+                                <td><b>Trung bình - Khá.</b> Nghiên cứu hơi cũ về mặt từ vựng mạng xã hội mới nhưng lý thuyết đối chiếu thì siêu vững.</td>
                             </tr>
                             <tr>
                                 <td>7</td>
                                 <td>Hoàng, M.Đ. (2022)</td>
                                 <td><i>Đặc điểm ngữ nghĩa và cú pháp của hiện tượng Konglish trong ngôn ngữ mạng của giới trẻ</i><br>Tạp chí Ngôn ngữ và Đời sống, 8(302).</td>
-                                <td>Phân tích ngôn ngữ mạng xã hội của thế hệ trẻ hiện đại</td>
-                                <td>Trích dẫn sinh động, bám sát các diễn đàn trực tuyến đời thường</td>
-                                <td><b>Cao.</b> Phù hợp lấy các ví dụ minh họa trực quan cho phần thực trạng sử dụng ngôn ngữ internet.</td>
+                                <td>Nghiên cứu cách nói lóng của giới trẻ trên không gian internet</td>
+                                <td>Trích lục từ các bài đăng mạng xã hội và hội thoại đời thường</td>
+                                <td><b>Cao.</b> Cho mình những ví dụ siêu đáng yêu và chân thực để đưa vào phần thực trạng ngôn ngữ mạng.</td>
                             </tr>
                             <tr>
                                 <td>8</td>
                                 <td>Bùi, Q.T. (2017)</td>
                                 <td><i>Từ điển từ ngoại lai tiếng Hàn hiện đại - Phân tích và ứng dụng trong thực tiễn dịch thuật</i><br>Hà Nội: Nhà xuất bản Đại học Quốc gia Hà Nội.</td>
-                                <td>Hệ thống hóa, thống kê phân loại và biên soạn giải nghĩa từ chuẩn xác</td>
-                                <td>Đối chiếu chuẩn xác với từ điển quốc gia của Viện Quốc ngữ Hàn Quốc</td>
-                                <td><b>Khá.</b> Giá trị cốt lõi rất chuẩn chỉnh, thích hợp làm cơ sở chuẩn hóa từ ngoại lai cho sinh viên ngoại ngữ.</td>
+                                <td>Sắp xếp, giải nghĩa từ ngoại lai có hệ thống và quy chuẩn</td>
+                                <td>So sánh đối chiếu chuẩn xác với Viện Quốc ngữ Hàn Quốc</td>
+                                <td><b>Khá.</b> Một cuốn cẩm nang gối đầu giường giá trị giúp tra cứu chuẩn nghĩa từ mượn cũ.</td>
                             </tr>
                             <tr>
                                 <td>9</td>
                                 <td>Ngô, T.M. (2025)</td>
                                 <td><i>Vướng mắc trong việc thống nhất quy chuẩn dịch thuật các thuật ngữ ngoại gốc Anh từ bản tin tiếng Hàn</i><br>Bài báo khoa học / Bản tin ngôn ngữ ứng dụng.</td>
-                                <td>Phân tích trường hợp cụ thể khi xử lý bản tin kinh tế thực tế</td>
-                                <td>Trích dẫn nguồn tin thời sự chính thống uy tín (KBS, Yonhap News...)</td>
-                                <td><b>Cao.</b> Rất mới và cập nhật sát sao thực tế thị trường dịch thuật, làm rõ các vướng mắc của dịch giả.</td>
+                                <td>Phân tích trường hợp thực tế khi dịch bản tin truyền hình thời sự</td>
+                                <td>Nguồn dẫn chứng từ các kênh tin tức chính thống Hàn Quốc</td>
+                                <td><b>Cao.</b> Bài viết rất mới, phản ánh rõ nét những khó khăn của một dịch giả khi đối mặt với tin tức thời sự nóng hổi.</td>
                             </tr>
                             <tr>
                                 <td>10</td>
                                 <td>Nguyễn, N.H. (2025)</td>
                                 <td><i>Những khó khăn khi xử lý một số hiện tượng "bất khả dịch" của sinh viên chuyên ngành tiếng Hàn tại Trường Đại học Ngoại ngữ, Đại học Quốc gia Hà Nội</i><br>VNU Journal of Foreign Studies.</td>
-                                <td>Nghiên cứu kết hợp khảo sát định lượng 175 sinh viên năm 3, 4 bằng bảng hỏi và bài dịch mẫu</td>
-                                <td>Hệ thống trích dẫn học thuật dịch thuật uy tín sâu sắc</td>
-                                <td><b>Rất Cao.</b> Cực kỳ giá trị vì vừa mới xuất bản vừa cung cấp số liệu thực chứng trực diện về rào cản dịch của sinh viên.</td>
+                                <td>Khảo sát thực chứng trên 175 sinh viên năm cuối bằng bảng câu hỏi và bài kiểm tra thực hành dịch</td>
+                                <td>Lý thuyết dịch thuật quốc tế vững vàng kết hợp số liệu thực tế</td>
+                                <td><b>Rất Cao.</b> Bài báo cung cấp số liệu thực chứng đáng tin cậy về các từ lóng khó dịch (독수리아빠, phông bạt...).</td>
                             </tr>
                             <tr>
                                 <td>11</td>
                                 <td>Trần, N.A., Tăng, T.T.N., & Nguyễn, H.M. (2024)</td>
                                 <td><i>Khảo sát ảnh hưởng của từ mượn tiếng Anh đối với việc học từ vựng tiếng Hàn...</i><br>Tạp chí Khoa học & Công nghệ ĐH Thái Nguyên.</td>
-                                <td>Khảo sát định lượng kết hợp định tính trên 120 sinh viên năm 4, 5 ngành song ngữ</td>
-                                <td>Hệ thống tài liệu tham khảo 9 nguồn uy tín trong và ngoài nước</td>
-                                <td><b>Rất Cao.</b> Cung cấp đầy đủ số liệu thực chứng chi tiết về mặt tâm lý người học (dễ nhớ 52.1%, dễ phân biệt 43.8%).</td>
+                                <td>Khảo sát định lượng trên 120 sinh viên học ngành song ngữ tiếng Hàn</td>
+                                <td>Trích dẫn chọn lọc từ 9 nguồn nghiên cứu khoa học uy tín</td>
+                                <td><b>Rất Cao.</b> Mang đến các con số đáng giá về tâm lý người học thực tế (52.1% thấy dễ nhớ, 43.8% thấy khó phân biệt).</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
 
-                <h4><i class="fa-solid fa-lightbulb"></i> Bài học nhỏ cho bản thân</h4>
-                <p>Kỹ năng tra cứu thông tin học thuật nghiêm túc giúp mình có cái nhìn bao quát và sâu sắc hơn hẳn việc chỉ đọc những bài tóm tắt hời hợt trên mạng. Khi đối chiếu và thẩm định các nghiên cứu này, mình học được cách lắng nghe nhiều quan điểm khác nhau để xây dựng một luận điểm vững vàng cho riêng mình.</p>
+                <h4><i class="fa-solid fa-lightbulb"></i> Bài học dễ thương mình rút ra</h4>
+                <p>Trước đây khi cần viết bài, mình hay tìm bừa trên mạng. Nhờ bài thực hành này, mình mới nhận ra giữa đại dương thông tin mênh mông, biết cách tìm tài liệu chuẩn chỉnh và thẩm định kỹ càng giúp mình tự tin hơn hẳn khi trình bày ý kiến khoa học.</p>
             `,
             bai3: `
-                <h3>Bài 3 - Viết Prompt hiệu quả cho các tác vụ học tập</h3>
+                <h3>Bài 3 - Bài tập 2 của mục 3.4: Viết Prompt hiệu quả cho các tác vụ học tập</h3>
                 <span class="tag">Prompt Engineering</span>
                 
-                <h4><i class="fa-solid fa-bullseye"></i> Mình muốn hướng tới điều gì?</h4>
-                <p>Mình muốn làm chủ nghệ thuật đặt câu lệnh (Prompting) theo mô hình <b>CLEAR</b> để AI không chỉ trả lời hời hợt mà thực sự trở thành người trợ lý học tập sắc sảo, giúp mình vượt qua các tác vụ ngôn ngữ khó một cách nhanh chóng.</p>
+                <h4><i class="fa-solid fa-bullseye"></i> Mục tiêu nhỏ của mình</h4>
+                <p>Học cách "thủ thỉ" sao cho AI hiểu đúng ý mình thông qua mô hình câu lệnh <b>CLEAR</b> (Đặt bối cảnh, Trao vai trò, Ra đề bài chi tiết, Hướng tới người nghe, và Chỉnh sửa tinh tế). Mình thử nâng cấp câu lệnh từ mức ngây ngô sang mức chuyên nghiệp cho 3 tác vụ học tập hằng ngày.</p>
 
-                <h4><i class="fa-solid fa-code-compare"></i> Trải nghiệm so sánh prompt đa cấp độ</h4>
+                <h4><i class="fa-solid fa-code-compare"></i> Nhấp xem mình nâng cấp câu hỏi cho AI nhé:</h4>
                 <div class="comparison-tabs">
                     <button class="comp-tab active" onclick="switchPromptTab('tacvu1')">Tác vụ 1: Dịch thuật</button>
                     <button class="comp-tab" onclick="switchPromptTab('tacvu2')">Tác vụ 2: Luyện thi TOPIK</button>
@@ -1738,73 +1757,73 @@
                     <!-- Dynamic content load by JS -->
                 </div>
 
-                <h4><i class="fa-solid fa-lightbulb"></i> Bài học nhỏ cho bản thân</h4>
-                <p>AI thông minh thế nào đều phụ thuộc vào cách chúng mình hỏi. Một câu lệnh sơ sài sẽ chỉ mang lại câu trả lời mờ nhạt. Khi mình hiểu rõ bối cảnh và hướng dẫn AI bằng một cấu trúc rõ ràng, bạn trợ lý này sẽ phản hồi cực kỳ thuyết phục và hữu ích.</p>
+                <h4><i class="fa-solid fa-lightbulb"></i> Bài học dễ thương mình rút ra</h4>
+                <p>AI thông minh hay lười biếng đều do cách mình đặt câu hỏi cả. Cứ hỏi ngắn tủn ngủn thì AI trả lời qua loa, nhưng khi mình chịu khó "tâm sự" rõ bối cảnh, trao vai trò cụ thể thì AI sẽ hóa thân thành một người gia sư thực sự tận tâm và tài năng.</p>
             `,
             bai4: `
-                <h3>Bài 4 - Sử dụng công cụ họp trực tuyến cho dự án nhóm</h3>
-                <span class="tag">Hợp tác số</span>
+                <h3>Bài 4 - Bài tập 3 của mục 4.4: Sử dụng công cụ họp trực tuyến cho dự án nhóm</h3>
+                <span class="tag">Hợp tác trực tuyến</span>
                 
-                <h4><i class="fa-solid fa-bullseye"></i> Mình muốn hướng tới điều gì?</h4>
-                <p>Mình muốn rèn luyện kỹ năng điều phối họp trực tuyến cùng bạn bè trên Google Meet, phân công vai trò rõ ràng và cùng nhau tổng duyệt bài nói "Các từ vựng tiếng Hàn sơ cấp" một cách ăn ý nhất.</p>
+                <h4><i class="fa-solid fa-bullseye"></i> Mục tiêu nhỏ của mình</h4>
+                <p>Tụi mình tập cách làm việc nhóm ăn ý qua Google Meet. Nhóm 35 tụi mình đã có một buổi họp 30 phút rôm rả để cùng duyệt thử slide, chỉnh sửa phát âm và phân vai cho buổi thuyết trình chủ đề "Từ vựng tiếng Hàn sơ cấp".</p>
 
-                <h4><i class="fa-solid fa-users-gear"></i> Chúng mình đã phân chia vai trò như thế nào?</h4>
+                <h4><i class="fa-solid fa-users-gear"></i> Phân chia vai trò của Nhóm 35 tụi mình:</h4>
                 <ul>
-                    <li><b>Người điều phối - Bạn Hiền Trang:</b> Chịu trách nhiệm kết nối, giữ nhịp cuộc họp và quản lý thời lượng chương trình.</li>
-                    <li><b>Thư ký cuộc họp - Bạn Thảo Anh:</b> Chăm chú ghi chép lại các biên bản và phân công chỉnh sửa bài sau cuộc họp.</li>
-                    <li><b>Người trình bày chính - Bạn Thanh Hà:</b> Đóng vai trò diễn giả thuyết trình thử nghiệm toàn bộ slide bài giảng.</li>
-                    <li><b>Thành viên phản biện - Bạn Hoàng Ngân & Bạn Khánh Chi (mình):</b> Lắng nghe phát âm, rà soát chính tả tiếng Hàn và góp ý chỉnh sửa thiết kế slide cho đẹp mắt hơn.</li>
+                    <li><b>Người dẫn dắt (Moderator) - Bạn Hiền Trang:</b> Người giữ nhịp cuộc họp, nhắc nhở tụi mình không bị lan man ngoài lề.</li>
+                    <li><b>Thư ký cuộc họp (Secretary) - Bạn Thảo Anh:</b> Người ghi nhận lại biên bản họp, ai làm gì, cần sửa chỗ nào đều được bạn ghi lại cực rõ.</li>
+                    <li><b>Người thuyết trình chính (Presenter) - Bạn Thanh Hà:</b> Đóng vai diễn giả thuyết trình thử nghiệm cho cả nhóm nghe.</li>
+                    <li><b>Hội đồng góp ý - Bạn Hoàng Ngân & Bạn Khánh Chi:</b> Tụi mình đóng vai khán giả khó tính, ngồi "nhặt sạn" chính tả, soi phát âm và căn chỉnh bố cục slide.</li>
                 </ul>
 
-                <h4><i class="fa-solid fa-clock"></i> Tiến trình 30 phút họp trực tuyến đầy sôi nổi của tụi mình:</h4>
+                <h4><i class="fa-solid fa-clock"></i> Nhật ký 30 phút họp nhóm sôi nổi:</h4>
                 <div class="timeline-vertical">
                     <div class="timeline-event">
                         <div class="timeline-event-time">00:00 - 05:00</div>
-                        <div class="timeline-event-title">Khởi động cuộc họp và thử đường truyền</div>
-                        <div class="timeline-event-desc">Hiền Trang kết nối các thành viên, thông qua mục tiêu buổi duyệt. Thư ký Thảo Anh mở biên bản họp dùng chung trên Google Docs để bắt đầu ghi chép.</div>
+                        <div class="timeline-event-title">Mở phòng họp và điểm danh</div>
+                        <div class="timeline-event-desc">Bạn Trang mở Meet, cả nhóm vào điểm danh đầy đủ. Bạn Anh mở file biên bản dùng chung để sẵn sàng ghi chép.</div>
                     </div>
                     <div class="timeline-event">
                         <div class="timeline-event-time">05:00 - 15:00</div>
-                        <div class="timeline-event-title">Thuyết trình thử nghiệm phần từ vựng sơ cấp</div>
-                        <div class="timeline-event-desc">Thanh Hà thuyết trình thử và trình chiếu slide. Nhóm cùng rà soát cách đọc, cách biểu đạt của các từ vựng sơ cấp thông dụng như động từ (먹다, 자다, 가da) và danh từ đời sống gần gũi.</div>
+                        <div class="timeline-event-title">Bạn Hà thuyết trình thử nghiệm</div>
+                        <div class="timeline-event-desc">Hà bắt đầu thuyết trình bài nói "Các từ vựng tiếng Hàn sơ cấp" kết hợp trình chiếu slide. Cả nhóm cùng rà soát các từ vựng căn bản (như các động từ 먹다, 자다, 가다 hay các danh từ quen thuộc 물, 음식, 학교).</div>
                     </div>
                     <div class="timeline-event">
                         <div class="timeline-event-time">15:00 - 25:00</div>
-                        <div class="timeline-event-title">Đóng góp ý kiến và phản biện hoàn thiện bài viết</div>
-                        <div class="timeline-event-desc">Hoàng Ngân và mình chỉ ra một vài chỗ Thanh Hà phát âm chưa chuẩn xác, đề xuất cắt bớt chữ trên slide và bổ sung các hình ảnh minh họa dễ thương hơn để bài nói bớt khô khan.</div>
+                        <div class="timeline-event-title">Cả nhóm nhảy vào đóng góp ý kiến</div>
+                        <div class="timeline-event-desc">Mình và Ngân góp ý cho Hà sửa lại những âm gió phát âm chưa chuẩn, đồng thời nhắc nhở lược bớt chữ trên slide để slide trông thoáng mắt và chuyên nghiệp hơn.</div>
                     </div>
                     <div class="timeline-event">
                         <div class="timeline-event-time">25:00 - 30:00</div>
-                        <div class="timeline-event-title">Thống nhất giải pháp và Bế mạc</div>
-                        <div class="timeline-event-desc">Thảo Anh thông qua biên bản họp, cả nhóm cùng chốt hạn chót chỉnh sửa bài để chuẩn bị cho buổi báo cáo chính thức trước cả lớp.</div>
+                        <div class="timeline-event-title">Thông qua biên bản và kết thúc</div>
+                        <div class="timeline-event-desc">Bạn Anh đọc lại biên bản họp trực tuyến để chốt các đầu việc cần sửa, thống nhất lịch hoàn thiện bài thuyết trình và chào tạm biệt nhau.</div>
                     </div>
                 </div>
 
                 <div class="highlight-box">
-                    <p><b>Hệ thống tài liệu họp dùng chung được thiết lập:</b></p>
-                    <p>🔗 Cơ sở dữ liệu từ vựng sơ cấp (Google Sheets): <a href="https://docs.google.com/spreadsheets/d/1P3Hhl_d_IsXAeaBjI3dcDv1OVC3CuGx7Jwa7G_B4yZ0/edit?usp=drivesdk" target="_blank" style="color:var(--primary-light);">Xem bảng từ vựng</a></p>
-                    <p>🔗 Biên bản cuộc họp 30 phút hoàn chỉnh (Google Docs): <a href="https://docs.google.com/document/d/1lR0ffhU hlcmoVxpnhX_bNNwiItVGICv1c2yaq3s0nE/edit?usp=drivesdk" target="_blank" style="color:var(--primary-light);">Xem biên bản họp</a></p>
+                    <p><b>Ghé xem kho lưu trữ tài liệu họp của nhóm mình nhé:</b></p>
+                    <p>🔗 Bảng từ vựng sơ cấp nhóm cùng soạn (Google Sheets): <a href="https://docs.google.com/spreadsheets/d/1P3Hhl_d_IsXAeaBjI3dcDv1OVC3CuGx7Jwa7G_B4yZ0/edit?usp=drivesdk" target="_blank" style="color:var(--primary-light);">Bấm xem bảng từ vựng</a></p>
+                    <p>🔗 Biên bản cuộc họp 30 phút của nhóm mình (Google Docs): <a href="https://docs.google.com/document/d/1lR0ffhU hlcmoVxpnhX_bNNwiItVGICv1c2yaq3s0nE/edit?usp=drivesdk" target="_blank" style="color:var(--primary-light);">Bấm xem biên bản họp</a></p>
                 </div>
 
-                <h4><i class="fa-solid fa-lightbulb"></i> Bài học nhỏ cho bản thân</h4>
-                <p>Làm việc nhóm trực tuyến không chỉ đơn giản là mở máy lên nghe giảng. Buổi họp chỉ thực sự chất lượng khi chúng mình có một thời gian biểu (agenda) rõ ràng và mọi người cùng chủ động hoàn thành phần việc của mình với tinh thần hợp tác vui vẻ nhất.</p>
+                <h4><i class="fa-solid fa-lightbulb"></i> Bài học dễ thương mình rút ra</h4>
+                <p>Họp trực tuyến muốn vui và hiệu quả thì trước khi họp phải biết rõ ai làm việc nấy. Việc phân vai điều phối, thuyết trình và thư ký rõ ràng giúp cả nhóm làm việc cực kỳ trôi chảy, không ai bị tị nạnh hay ngơ ngác không biết làm gì.</p>
             `,
             bai5: `
-                <h3>Bài 5 - Sử dụng AI tạo sinh để hỗ trợ sáng tạo nội dung</h3>
+                <h3>Bài 5 - Bài tập 2 của mục 5.4: Sử dụng AI tạo sinh để hỗ trợ sáng tạo nội dung</h3>
                 <span class="tag">Sáng tạo nội dung số</span>
                 
-                <h4><i class="fa-solid fa-bullseye"></i> Mình muốn hướng tới điều gì?</h4>
-                <p>Học cách ứng dụng công nghệ thông minh (ChatGPT để dựng dàn ý nội dung, DALL-E để thiết kế ảnh minh họa và Canva AI để dựng slide) nhằm làm sống động chuyên đề nghiên cứu liên ngành đầy thú vị: <b>"Hiện tượng 'Konglish' và Từ lóng thế hệ Alpha trong tiếng Hàn"</b>.</p>
+                <h4><i class="fa-solid fa-bullseye"></i> Mục tiêu nhỏ của mình</h4>
+                <p>Thực hiện một bài thuyết trình chuyên nghiệp có tên: <b>"Hiện tượng 'Konglish' và Từ lóng thế hệ Alpha trong tiếng Hàn hiện đại: Xu hướng hội nhập ngôn ngữ toàn cầu hay rào cản đối với người học?"</b>. Mình muốn thử bắt tay làm việc cùng AI, nhờ ChatGPT xây dựng dàn ý học thuật sâu sắc, dùng DALL-E phác họa ý tưởng bằng tranh vẽ nghệ thuật, rồi dùng Canva AI thiết kế slide sao cho lấp lánh mộng mơ nhất.</p>
 
-                <h4><i class="fa-solid fa-desktop"></i> Cùng dạo xem các slide thuyết trình của tụi mình nhé</h4>
-                <p class="info-text">Nhấp vào nút "Slide tiếp" để lướt qua nội dung chi tiết của 7 slides thuyết trình:</p>
+                <h4><i class="fa-solid fa-desktop"></i> Cùng lật giở slide thuyết trình của mình nhé:</h4>
+                <p class="info-text">Nhấp nút "Slide tiếp" để xem nội dung chi tiết từng trang slide mình đã thiết kế nha:</p>
                 
                 <div class="slide-previewer">
                     <div class="slide-screen">
                         <div class="slide-decor-star">✦</div>
                         <div class="slide-title-display" id="slide-title-text">Đang tải slide...</div>
                         <div class="slide-body-display" id="slide-body-text">
-                            Đang tải dữ liệu nội dung chi tiết...
+                            Đang tải nội dung...
                         </div>
                         <div class="slide-footer-info">
                             <span>Phạm Trần Khánh Chi - ULIS</span>
@@ -1818,72 +1837,72 @@
                     </div>
                 </div>
 
-                <h4><i class="fa-solid fa-paint-brush"></i> Prompt hình ảnh mình đã gõ (DALL-E):</h4>
+                <h4><i class="fa-solid fa-paint-brush"></i> Cú pháp Prompt mình dùng để vẽ tranh minh họa:</h4>
                 <div class="highlight-box">
                     <p><i>“Một bức ảnh minh họa số, hiển thị một bức tường ngôn ngữ khổng lồ được xây bằng các khối gạch có khắc các ký tự Hangeul của các từ lóng Alpha. Trên một số khối gạch, các ký tự tiếng Anh được chèn vào một cách kỳ lạ, như những mảnh ghép không khớp (ví dụ: '갓생' với 'GOD-LIFE'). Một người học trẻ tuổi đang đứng ở một bên bức tường, nhìn lên với vẻ hoang mang, tay cầm một cuốn sách giáo khoa truyền thống. Ở phía xa, qua một vết nứt trên bức tường, có thể nhìn thấy một thế giới kết nối, rực rỡ và hội nhập, được biểu thị bằng các đường dây dữ liệu kỹ thuật số.”</i></p>
                 </div>
 
-                <p>🔗 Bản thiết kế slide hoàn chỉnh trên Canva AI của mình: <a href="https://canva.link/giapgs1e9plfwnq" target="_blank" style="color:var(--accent-warm);">Trải nghiệm sản phẩm Slide trực quan</a></p>
+                <p>🔗 Ghé xem slide thuyết trình hoàn thiện của mình trên Canva nhé: <a href="https://canva.link/giapgs1e9plfwnq" target="_blank" style="color:var(--accent-warm);">Nhấp xem Slide của mình</a></p>
 
-                <h4><i class="fa-solid fa-lightbulb"></i> Bài học nhỏ cho bản thân</h4>
-                <p>AI tạo sinh là người trợ lý hình ảnh tuyệt vời, giúp mình biến những ý tưởng ngôn ngữ có vẻ khô khan thành những slide thuyết trình đầy màu sắc và cuốn hút. Việc phối hợp nhịp nhàng giữa trí tuệ của bản thân và tính thẩm mỹ tự động của công cụ số giúp nâng tầm bài thuyết trình lên rất nhiều.</p>
+                <h4><i class="fa-solid fa-lightbulb"></i> Bài học dễ thương mình rút ra</h4>
+                <p>Có AI làm trợ lý sáng tạo thích lắm luôn! Thay vì cặm cụi gõ từng dòng chữ hay kéo thả slide mất cả buổi, mình dành thời gian đó để đào sâu tư duy học thuật. Sự kết hợp giữa tư duy ngôn ngữ của mình và khả năng đồ họa của AI đã cho ra một sản phẩm khiến mình rất tự hào.</p>
             `,
             bai6: `
-                <h3>Bài 6 - Sử dụng AI có trách nhiệm trong học tập và nghiên cứu</h3>
+                <h3>Bài 6 - Bài tập 4 của mục 6.4: Sử dụng AI có trách nhiệm trong học tập và nghiên cứu</h3>
                 <span class="tag">Đạo đức học thuật số</span>
                 
-                <h4><i class="fa-solid fa-bullseye"></i> Mình muốn hướng tới điều gì?</h4>
-                <p>Tìm hiểu các quy chuẩn văn minh về việc dùng AI trong học đường, đồng thời tự xây dựng cho mình những giới hạn đạo đức rõ ràng để luôn giữ được sự trung thực của một người học ngoại ngữ chân chính.</p>
+                <h4><i class="fa-solid fa-bullseye"></i> Mục tiêu nhỏ của mình</h4>
+                <p>Tìm hiểu các quy định về liêm chính học thuật của nhà trường, học cách phân biệt rạch ròi đâu là sự hỗ trợ hợp lý của công nghệ, đâu là hành vi gian lận bài vở. Từ đó, mình tự thiết lập cho bản thân một bản cam kết 5 nguyên tắc ứng xử văn minh và tự lực khi đồng hành cùng bạn AI.</p>
 
-                <h4><i class="fa-solid fa-shield-halved"></i> Ranh giới giữa hỗ trợ hợp lý và gian lận học thuật:</h4>
+                <h4><i class="fa-solid fa-shield-halved"></i> Giới hạn của sự giúp đỡ</h4>
                 <ul>
-                    <li><b>Sự hỗ trợ hợp lý:</b> AI đóng vai trò như một "người hướng dẫn" tận tâm. Chúng mình có thể nhờ AI giải thích các cấu trúc ngữ pháp tiếng Hàn khó, hỗ trợ gợi ý khung sườn bài viết (outlining) hoặc kiểm tra lỗi chính tả để hoàn thiện bài học tốt hơn.</li>
-                    <li><b>Hành vi gian lận:</b> Diễn ra khi chúng mình phó thác toàn bộ bài tập cho AI viết từ đầu đến cuối rồi copy-paste mang nộp mà không hề suy nghĩ, phản biện. Đây là hành vi thiếu tôn trọng bản thân và vi phạm nghiêm trọng tính trung thực học thuật.</li>
+                    <li><b>Được phép (Hỗ trợ hợp lý):</b> Khi mình nhờ bạn AI giải thích giùm một cấu trúc ngữ pháp tiếng Hàn khó, nhờ bạn gợi ý dàn bài thuyết trình cho phong phú, hoặc kiểm tra lỗi chính tả trong văn bản. Đây là hành vi tích cực, thúc đẩy tinh thần ham học hỏi.</li>
+                    <li><b>Không được phép (Vi phạm):</b> Khi mình phó thác toàn bộ bài tập cho AI viết giùm từ đầu đến cuối, rồi thản nhiên copy-paste nguyên văn mang đi nộp mà không hề suy nghĩ hay chỉnh sửa gì. Đây là hành vi lừa dối kết quả học tập và đạo văn kỹ thuật số.</li>
                 </ul>
 
-                <h4><i class="fa-solid fa-list-check"></i> Bộ 5 nguyên tắc ứng xử văn minh cùng AI của mình (Nhấp để tick):</h4>
+                <h4><i class="fa-solid fa-list-check"></i> Bản cam kết 5 nguyên tắc vàng của mình (Nhấp để tick chọn nhé):</h4>
                 <div class="ethical-checklist">
                     <div class="checklist-item" onclick="toggleCheck(this)">
                         <div class="checklist-check"><i class="fa-solid fa-check" style="display:none;"></i></div>
                         <div class="checklist-info">
-                            <h5>1. Tư duy trước, AI sau (Thinking First, AI Second)</h5>
-                            <p>Luôn tự mình suy nghĩ, đọc tài liệu gốc và định hình quan điểm cá nhân trước khi mở chatbot hỗ trợ. AI chỉ là người phản biện, không phải người suy nghĩ thay.</p>
+                            <h5>1. Mình suy nghĩ trước, rồi mới hỏi AI sau</h5>
+                            <p>Luôn tự mình tìm tòi, đọc tài liệu chuyên ngành để hình thành quan điểm cá nhân trước khi mở Chatbot. Tuyệt đối không để AI dắt mũi tư duy ban đầu của mình.</p>
                         </div>
                     </div>
                     <div class="checklist-item" onclick="toggleCheck(this)">
                         <div class="checklist-check"><i class="fa-solid fa-check" style="display:none;"></i></div>
                         <div class="checklist-info">
-                            <h5>2. Minh bạch tuyệt đối (Absolute Transparency)</h5>
-                            <p>Cam kết công khai trung thực việc có sử dụng AI trong bài viết thông qua phần "Tuyên bố sử dụng AI" chi tiết ở cuối bài để thầy cô dễ dàng theo dõi.</p>
+                            <h5>2. Có dùng AI thì cứ tự tin khai báo</h5>
+                            <p>Mình cam kết trung thực, luôn đính kèm một bản "Tuyên bố sử dụng AI" chi tiết trong phụ lục bài viết để ghi nhận sự hỗ trợ của công nghệ.</p>
                         </div>
                     </div>
                     <div class="checklist-item" onclick="toggleCheck(this)">
                         <div class="checklist-check"><i class="fa-solid fa-check" style="display:none;"></i></div>
                         <div class="checklist-info">
-                            <h5>3. Kiểm chứng độc lập (Independent Verification)</h5>
-                            <p>Không bao giờ tin tưởng hoàn toàn dữ liệu từ AI cung cấp khi chưa đối chiếu lại với các nguồn tài liệu chính thống để tránh lỗi "ảo giác AI".</p>
+                            <h5>3. Luôn kiểm chứng thông tin, không tin mù quáng</h5>
+                            <p>Mình không bao giờ tin ngay những số liệu hay dẫn chứng AI cung cấp (vì AI thỉnh thoảng cũng bị "ảo giác" đó nha). Mình luôn đối chiếu lại với các nguồn tài liệu, sách giáo khoa chính thống.</p>
                         </div>
                     </div>
                     <div class="checklist-item" onclick="toggleCheck(this)">
                         <div class="checklist-check"><i class="fa-solid fa-check" style="display:none;"></i></div>
                         <div class="checklist-info">
-                            <h5>4. Chống đạo văn kỹ thuật số (Anti Digital Plagiarism)</h5>
-                            <p>Nói không với hành vi copy-paste nguyên văn. Mọi ý kiến gợi ý hay của AI đều phải được viết lại bằng ngôn ngữ và tư duy của riêng mình.</p>
+                            <h5>4. Tuyệt đối không sao chép nguyên văn</h5>
+                            <p>Mọi gợi ý hay của bạn AI đều được mình tiếp nhận, nghiền ngẫm và viết lại hoàn toàn bằng ngôn từ cũng như giọng văn của riêng bản thân mình.</p>
                         </div>
                     </div>
                     <div class="checklist-item" onclick="toggleCheck(this)">
                         <div class="checklist-check"><i class="fa-solid fa-check" style="display:none;"></i></div>
                         <div class="checklist-info">
-                            <h5>5. Bảo mật dữ liệu học đường (Strict Data Privacy)</h5>
-                            <p>Không tải lên các nền tảng AI công cộng bất kỳ thông tin nhạy cảm của cá nhân hay các dữ liệu nghiên cứu nội bộ của nhà trường.</p>
+                            <h5>5. Bảo vệ thông tin và dữ liệu học tập</h5>
+                            <p>Mình cam kết không tải lên các công cụ AI công cộng bất kỳ thông tin cá nhân nhạy cảm hay tài liệu nội bộ chưa công bố của trường học.</p>
                         </div>
                     </div>
                 </div>
 
-                <p>🔗 Infographic "Sử dụng AI có trách nhiệm" trên Canva: <a href="https://canva.link/52oxcx876sur4v0" target="_blank" style="color:var(--accent-warm);">Trải nghiệm sản phẩm thiết kế của Khánh Chi</a></p>
+                <p>🔗 Infographic "Dùng AI có trách nhiệm" của mình thiết kế trên Canva nè: <a href="https://canva.link/52oxcx876sur4v0" target="_blank" style="color:var(--accent-warm);">Bấm xem Infographic nha</a></p>
 
-                <h4><i class="fa-solid fa-lightbulb"></i> Bài học nhỏ cho bản thân</h4>
-                <p>AI là một công cụ hỗ trợ tuyệt vời, nhưng lòng tự trọng học thuật và sự trung thực mới là điều giữ cho hành trình tích lũy tri thức của chúng mình luôn có giá trị vững bền. Việc tự giác áp dụng bộ nguyên tắc ứng xử này giúp mình bảo vệ sự sáng tạo độc lập của bản thân trước mọi dự án tương lai.</p>
+                <h4><i class="fa-solid fa-lightbulb"></i> Bài học dễ thương mình rút ra</h4>
+                <p>AI suy cho cùng cũng chỉ là một người bạn trợ lý. Bản lĩnh và lòng tự trọng học thuật của một sinh viên biên phiên dịch tương lai mới là điều quan trọng nhất. Làm ra một sản phẩm trung thực bằng chính nỗ lực của mình luôn đem lại cảm giác tự hào và hạnh phúc nhất.</p>
             `
         };
 
@@ -1895,6 +1914,7 @@
             modal.classList.add('active');
             document.body.style.overflow = 'hidden';
 
+            // Kích hoạt giả lập đặc thù cho từng bài khi mở
             if (id === 'bai1') {
                 setTimeout(() => setExpStep(1), 50);
             } else if (id === 'bai3') {
@@ -1939,27 +1959,27 @@
                     gridContent.innerHTML = `
                         <div class="exp-item folder" onclick="setExpStep(2)">
                             <i class="fa-solid fa-hard-drive" style="color: #4a90e2;"></i>
-                            <span>New Volume (D:)</span>
+                            <span>Ổ học tập (D:)</span>
                         </div>
                         <div class="exp-item folder">
                             <i class="fa-solid fa-hard-drive" style="color: #a6b2c9;"></i>
-                            <span>Local Disk (C:)</span>
+                            <span>Ổ hệ thống (C:)</span>
                         </div>
                     `;
-                    statusMsg.innerText = "Bước 1: Nhấn Win+E, cửa sổ File Explorer hiển thị hệ thống các ổ đĩa ổ D: và ổ C:. Click vào ổ D: để tiếp tục.";
+                    statusMsg.innerText = "Bước 1: Nhấn Win+E, File Explorer mở ra với ổ đĩa học tập D: và ổ C:. Click vào ổ D: để dạo chơi tiếp nhé.";
                     break;
                 case 2:
-                    addressBar.innerText = "This PC > New Volume (D:)";
+                    addressBar.innerText = "This PC > Ổ học tập (D:)";
                     gridContent.innerHTML = `
                         <div class="exp-item folder" style="opacity:0.5;">
                             <i class="fa-solid fa-folder"></i>
                             <span>Office 2016</span>
                         </div>
                     `;
-                    statusMsg.innerText = "Bước 2: Bạn đã truy cập vào ổ đĩa New Volume (D:). Ổ đĩa hiện chưa có thư mục học tập.";
+                    statusMsg.innerText = "Bước 2: Bạn đã vào trong ổ đĩa học tập (D:). Hiện ổ đĩa chưa có thư mục học tập của mình.";
                     break;
                 case 3:
-                    addressBar.innerText = "This PC > New Volume (D:)";
+                    addressBar.innerText = "This PC > Ổ học tập (D:)";
                     gridContent.innerHTML = `
                         <div class="exp-item folder" style="opacity:0.5;">
                             <i class="fa-solid fa-folder"></i>
@@ -1970,12 +1990,12 @@
                             <span>THUCHANH_PhamTranKhanhChi</span>
                         </div>
                     `;
-                    statusMsg.innerText = "Bước 3: Chuột phải -> New -> Folder thành công! Đã tạo thư mục chính 'THUCHANH_PhamTranKhanhChi'. Click thư mục để vào trong.";
+                    statusMsg.innerText = "Bước 3: Chuột phải chọn New -> Folder thành công! Đã tạo thư mục chính 'THUCHANH_PhamTranKhanhChi'. Click vào thư mục để đi tiếp nha.";
                     break;
                 case 4:
                     addressBar.innerText = "D: > THUCHANH_PhamTranKhanhChi";
                     gridContent.innerHTML = `<div style="color: var(--text-muted); font-size:0.75rem;">Thư mục này hiện chưa có nội dung.</div>`;
-                    statusMsg.innerText = "Bước 4: Bạn đang ở bên trong thư mục chính 'THUCHANH_PhamTranKhanhChi'. Hãy tiến hành tạo tệp ghi chú mới.";
+                    statusMsg.innerText = "Bước 4: Bạn đang ở trong ngôi nhà lớn 'THUCHANH_PhamTranKhanhChi'. Hãy tạo tệp ghi chú mới.";
                     break;
                 case 5:
                     addressBar.innerText = "D: > THUCHANH_PhamTranKhanhChi";
@@ -1985,7 +2005,7 @@
                             <span>GhiChu.txt</span>
                         </div>
                     `;
-                    statusMsg.innerText = "Bước 5: Chuột phải -> New -> Text Document thành công! File 'GhiChu.txt' đã được khởi tạo.";
+                    statusMsg.innerText = "Bước 5: Chuột phải chọn New -> Text Document thành công! File 'GhiChu.txt' đã được khởi tạo.";
                     break;
                 case 6:
                     addressBar.innerText = "D: > THUCHANH_PhamTranKhanhChi";
@@ -1995,7 +2015,7 @@
                             <span style="color:var(--accent-warm);">GhiChuQuanTrong.txt</span>
                         </div>
                     `;
-                    statusMsg.innerText = "Bước 6: Nhấn F2 đổi tên file thành công! Tên mới hiển thị là 'GhiChuQuanTrong.txt'.";
+                    statusMsg.innerText = "Bước 6: Nhấp F2 để đổi tên tệp tin thành công! Tên mới hiển thị xinh xắn là 'GhiChuQuanTrong.txt'.";
                     break;
                 case 7:
                     addressBar.innerText = "D: > THUCHANH_PhamTranKhanhChi";
@@ -2009,7 +2029,7 @@
                             <span>TaiLieu</span>
                         </div>
                     `;
-                    statusMsg.innerText = "Bước 7: Chuột phải -> New -> Folder thành công! Đã tạo thêm thư mục con 'TaiLieu'.";
+                    statusMsg.innerText = "Bước 7: Chuột phải chọn New -> Folder thành công! Đã tạo thêm hộc phụ con 'TaiLieu'.";
                     break;
                 case 8:
                     addressBar.innerText = "D: > THUCHANH_PhamTranKhanhChi > TaiLieu";
@@ -2019,7 +2039,7 @@
                             <span>GhiChuQuanTrong.txt</span>
                         </div>
                     `;
-                    statusMsg.innerText = "Bước 8: Nhấn Ctrl+C tệp nguồn, vào thư mục con 'TaiLieu' nhấn Ctrl+V. Bản sao của tệp đã được nhân bản tại đây.";
+                    statusMsg.innerText = "Bước 8: Nhấn Ctrl+C tệp nguồn ngoài thư mục chính, vào thư mục con 'TaiLieu' nhấn Ctrl+V. Bản sao của tệp đã được dán thành công ở đây.";
                     break;
                 case 9:
                     addressBar.innerText = "D: > THUCHANH_PhamTranKhanhChi > TaiLieu";
@@ -2033,7 +2053,7 @@
                             <span>DiChuyen.txt</span>
                         </div>
                     `;
-                    statusMsg.innerText = "Bước 9: Di chuyển tệp tin (Ctrl+X ngoài thư mục chính và Ctrl+V vào trong TaiLieu). File 'DiChuyen.txt' ngoài thư mục chính đã biến mất.";
+                    statusMsg.innerText = "Bước 9: Thực hiện di chuyển tệp tin (Ctrl+X bên ngoài và Ctrl+V vào trong TaiLieu). File 'DiChuyen.txt' ngoài thư mục gốc đã dọn đi.";
                     break;
                 case 10:
                     addressBar.innerText = "D: > THUCHANH_PhamTranKhanhChi > TaiLieu";
@@ -2043,7 +2063,7 @@
                             <span>DiChuyen.txt</span>
                         </div>
                     `;
-                    statusMsg.innerText = "Bước 10: Chuột phải chọn Delete tệp 'GhiChuQuanTrong.txt'. File đã được chuyển an toàn vào Thùng rác (Recycle Bin).";
+                    statusMsg.innerText = "Bước 10: Chuột phải chọn Delete tệp 'GhiChuQuanTrong.txt'. File đã được chuyển tạm vào Sọt rác.";
                     break;
                 case 11:
                     addressBar.innerText = "D: > THUCHANH_PhamTranKhanhChi > TaiLieu";
@@ -2064,7 +2084,7 @@
                             <span>GhiChuQuanTrong.txt</span>
                         </div>
                     `;
-                    statusMsg.innerText = "Bước 12: Vào Recycle Bin, chuột phải vào tệp GhiChuQuanTrong.txt chọn Restore. Tệp đã quay trở lại thư mục con 'TaiLieu' an toàn!";
+                    statusMsg.innerText = "Bước 12: Vào Sọt rác, chuột phải vào tệp GhiChuQuanTrong.txt chọn Restore. Tệp đã quay trở về thư mục 'TaiLieu' an toàn rồi nè!";
                     break;
             }
         }
@@ -2076,14 +2096,14 @@
             
             if (gridContent) gridContent.innerHTML = `<div style="color: var(--text-muted); font-size:0.75rem;">Thư mục này hiện không có nội dung.</div>`;
             if (alertBox) alertBox.style.display = 'none';
-            if (statusMsg) statusMsg.innerText = "Xác nhận xóa vĩnh viễn thành công! Tệp 'DiChuyen.txt' đã bị hủy hoàn toàn khỏi hệ thống.";
+            if (statusMsg) statusMsg.innerText = "Xác nhận xóa vĩnh viễn thành công! Tệp 'DiChuyen.txt' đã bay màu hoàn toàn khỏi máy tính.";
         }
 
         function cancelShiftDelete() {
             const alertBox = document.getElementById('exp-alert-box');
             const statusMsg = document.getElementById('exp-status-msg');
             if (alertBox) alertBox.style.display = 'none';
-            if (statusMsg) statusMsg.innerText = "Đã hủy lệnh xóa vĩnh viễn. Tệp 'DiChuyen.txt' vẫn được bảo vệ an toàn.";
+            if (statusMsg) statusMsg.innerText = "Đã hủy lệnh xóa vĩnh viễn. Tệp 'DiChuyen.txt' vẫn nằm im an toàn.";
         }
 
         /* --- LOGIC SO SÁNH PROMPT BÀI 3 --- */
@@ -2095,17 +2115,17 @@
                     <div class="prompt-column">
                         <div class="prompt-col-title">Prompt Cơ bản</div>
                         <div class="prompt-col-text">"Dịch đoạn văn sau sang tiếng Hàn và giải thích nghĩa."</div>
-                        <div class="prompt-col-eval"><b>Đánh giá:</b> AI dịch thô, sát nghĩa đen (word-by-word), không làm rõ sắc thái biểu cảm và các hiện tượng ngữ pháp nâng cao.</div>
+                        <div class="prompt-col-eval"><b>Đánh giá:</b> Bạn AI trả lời hơi bị lười một tí, dịch sát sạt nghĩa đen (word-by-word) nghe rất thô và cứng nhắc.</div>
                     </div>
                     <div class="prompt-column">
                         <div class="prompt-col-title">Prompt Cải tiến</div>
                         <div class="prompt-col-text">"Hãy dịch đoạn văn tiếng Việt sau sang tiếng Hàn. Sau đó: giải thích các từ vựng quan trọng, cấu trúc ngữ pháp chính trong đoạn văn và giải thích chi tiết sắc thái biểu cảm của các câu."</div>
-                        <div class="prompt-col-eval"><b>Đánh giá:</b> AI dịch tốt hơn, có phân tích ngữ pháp cơ bản nhưng chưa đưa ra ngữ cảnh hoặc ví dụ ứng dụng thực tế của từ vựng.</div>
+                        <div class="prompt-col-eval"><b>Đánh giá:</b> Bạn AI dịch hay hơn rồi nè, có bóc tách từ vựng cơ bản nhưng chưa đưa ra ngữ cảnh cụ thể hay ví dụ thực hành.</div>
                     </div>
                     <div class="prompt-column highlighted">
                         <div class="prompt-col-title">✦ Prompt Nâng cao (CLEAR)</div>
                         <div class="prompt-col-text">"Bạn là một giáo viên bộ môn tiếng Hàn có kinh nghiệm giảng dạy cho sinh viên có mong muốn học tiếng Hàn, bạn hãy dịch toàn bộ đoạn văn tiếng Việt sau sang tiếng Hàn một cách tự nhiên và đúng ngữ cảnh. Sau đó liệt kê các từ vựng quan trọng kèm ngữ nghĩa và cách sử dụng chúng, phân tích chi tiết các ngữ pháp được sử dụng trong đoạn văn và đưa ra ví dụ cách sử dụng ngữ pháp đó, giải thích sắc thái biểu cảm trong câu."</div>
-                        <div class="prompt-col-eval"><b>Đánh giá:</b> Trả về văn phong sư phạm chuẩn mực, phân tích có cấu trúc bài bản, kèm 3-4 ví dụ ứng dụng thực tế cho từng ngữ pháp khó.</div>
+                        <div class="prompt-col-eval"><b>Đánh giá:</b> Bạn AI hóa thân thành giáo sư sư phạm cực kỳ có tâm, dịch tự nhiên như người bản xứ, phân tích chi tiết kèm cả ví dụ ứng dụng thực hành siêu hay luôn.</div>
                     </div>
                 </div>
             `,
@@ -2116,17 +2136,17 @@
                     <div class="prompt-column">
                         <div class="prompt-col-title">Prompt Cơ bản</div>
                         <div class="prompt-col-text">"Hãy lên kế hoạch ôn thi TOPIK."</div>
-                        <div class="prompt-col-eval"><b>Đánh giá:</b> Kế hoạch máy móc, dàn trải (mỗi ngày học 30 phút), không phân rã mục tiêu kỹ năng theo từng tuần hay tháng.</div>
+                        <div class="prompt-col-eval"><b>Đánh giá:</b> Bạn AI cho một kế hoạch rất máy móc, chung chung (học từ vựng mỗi ngày 30 phút), không chia giai đoạn rõ rệt nên cực khó theo học.</div>
                     </div>
                     <div class="prompt-column">
                         <div class="prompt-col-title">Prompt Cải tiến</div>
                         <div class="prompt-col-text">"Hãy lập kế hoạch ôn thi TOPIK 2 trong 3 tháng cho sinh viên với trình độ sơ cấp và phù hợp với sinh viên bận học trên trường vào các buổi chiều. Kế hoạch bao gồm: mục tiêu từng tuần, thời gian học và nghỉ, các kỹ năng cần luyện (từ vựng, ngữ pháp, nghe, nói, đọc, viết)."</div>
-                        <div class="prompt-col-eval"><b>Đánh giá:</b> Đã chia nhỏ kế hoạch theo tháng và tuần nhưng thông tin còn dàn trải dạng danh sách, chưa tối ưu hóa lịch giải lao.</div>
+                        <div class="prompt-col-eval"><b>Đánh giá:</b> Kế hoạch chi tiết hơn, đã biết chia nhỏ lộ trình theo tuần nhưng thông tin hiển thị còn dài dòng, chưa phân chia hộc thời gian nghỉ ngơi khoa học.</div>
                     </div>
                     <div class="prompt-column highlighted">
                         <div class="prompt-col-title">✦ Prompt Nâng cao (CLEAR)</div>
                         <div class="prompt-col-text">"Bạn là một gia sư TOPIK hoặc giáo viên giảng dạy môn tiếng Hàn đang hướng dẫn sinh viên Việt Nam tự học tiếng Hàn. Hãy xây dựng kế hoạch học TOPIK trong 3 tháng cho sinh viên của bạn đang ở trình độ sơ cấp, muốn đạt TOPIK 2, còn bận học trên trường vào buổi chiều từ 12h đến 19h00 chỉ có khoảng 2-3 tiếng học mỗi ngày để học. Trong kế hoạch đó, bao gồm: đưa ra mục tiêu học tập từng tuần, chia kế hoạch theo từng tuần chi tiết, phân bổ thời gian hợp lý cho các kỹ năng từ vựng ngữ pháp, nghe, nói, đọc, viết. Sau đó đưa ra phương pháp kiểm tra và đánh giá tiến độ sau mỗi tuần, và từ đó nêu ra giải pháp để cải thiện. Chú ý trình bày theo dạng bảng để dễ theo dõi."</div>
-                        <div class="prompt-col-eval"><b>Đánh giá:</b> Trả về bảng lộ trình Markdown khoa học. Phân bổ chính xác 2.5 tiếng học mỗi tối, có lịch giải lao 15 phút, có rubrics test năng lực hàng tuần.</div>
+                        <div class="prompt-col-eval"><b>Đánh giá:</b> Bạn AI trả về một bảng lộ trình Markdown vô cùng xuất sắc. Chia nhỏ mục tiêu cụ thể 2.5 tiếng mỗi tối, xen kẽ giải lao 15 phút, kèm các bài test kiểm tra năng lực cuối tuần cực xịn.</div>
                     </div>
                 </div>
             `,
@@ -2137,17 +2157,17 @@
                     <div class="prompt-column">
                         <div class="prompt-col-title">Prompt Cơ bản</div>
                         <div class="prompt-col-text">"Hãy tạo đề kiểm tra và đáp án để chấm điểm."</div>
-                        <div class="prompt-col-eval"><b>Đánh giá:</b> Trả về đề thi siêu ngắn (5 câu trắc nghiệm đơn thuần), không đủ độ rộng bao phủ kiến thức học đường.</div>
+                        <div class="prompt-col-eval"><b>Đánh giá:</b> Bạn AI cho ra một đề thi siêu ngắn (5 câu trắc nghiệm đơn giản), chẳng đủ để đánh giá năng lực học tập thực tế gì cả.</div>
                     </div>
                     <div class="prompt-column">
                         <div class="prompt-col-title">Prompt Cải tiến</div>
                         <div class="prompt-col-text">"Hãy tạo một đề kiểm tra tiếng Hàn dành cho sinh viên năm nhất đang ở trình độ sơ cấp. Đề kiểm tra gồm 12 câu trắc nghiệm và 5 câu tự luận. Sau đó cung cấp đáp án và đưa ra tiêu chí chấm điểm chi tiết cho từng phần."</div>
-                        <div class="prompt-col-eval"><b>Đánh giá:</b> Có số lượng câu hỏi đúng yêu cầu nhưng tiêu chí chấm tự luận chung chung (Đúng ngữ pháp: 2 điểm), khó áp dụng chấm chéo.</div>
+                        <div class="prompt-col-eval"><b>Đánh giá:</b> Đề thi có số lượng câu hỏi đúng chuẩn hơn, nhưng tiêu chí chấm phần tự luận còn khá mơ hồ, khó dùng để tự chấm điểm chéo cho nhau.</div>
                     </div>
                     <div class="prompt-column highlighted">
                         <div class="prompt-col-title">✦ Prompt Nâng cao (CLEAR)</div>
                         <div class="prompt-col-text">"Bạn là giảng viên tiếng Hàn tại một trường đại học. Bạn hãy thiết kế một đề kiểm tra thường xuyên đánh giá kỹ năng tiếng Hàn cho sinh viên trình độ sơ cấp với 12 câu trắc nghiệm (bao gồm 4 chọn từ khác loại, 6 câu điền từ thích hợp – kiểm tra cả từ vựng và ngữ pháp, 2 câu chọn lỗi sai và sửa), 5 câu tự luận (bao gồm 2 câu viết lại câu dựa trên các từ gợi ý, 2 câu sắp xếp câu và 1 câu viết đoạn văn 200 chữ với chủ đề giới thiệu sở thích của bản thân. Sau đó, cung cấp đáp án chi tiết, thiết kế tiêu chí chấm điểm từng phần và giải thích cụ thể cách chấm về độ chính xác, vốn từ, ngữ pháp, khả năng diễn đạt, cách trình bày. Đồng thời đề thi được phân loại rõ ràng theo 4 mức độ: nhận biết, thông hiểu, vận dụng và vận dụng cao, cách trình bày chuyên nghiệp, như một đề thi chính thức."</div>
-                        <div class="prompt-col-eval"><b>Đánh giá:</b> Đề kiểm tra chuẩn học thuật chính thức, phân chia câu hỏi theo ma trận 4 mức độ nhận thức, bảng tiêu chí chấm tự luận cụ thể từng lỗi nhỏ.</div>
+                        <div class="prompt-col-eval"><b>Đánh giá:</b> Bạn AI cho ra một đề kiểm tra chuẩn chỉnh đúng phong cách trường đại học. Có phân chia nhận biết - thông hiểu, kèm bảng biểu điểm rubrics chấm tự luận vô cùng cụ thể.</div>
                     </div>
                 </div>
             `
@@ -2169,32 +2189,32 @@
         /* --- LOGIC TRÌNH GIẢ LẬP SLIDES BÀI 5 --- */
         const slides = [
             {
-                title: "Slide 1: Bối cảnh & Định danh ngôn ngữ học",
-                content: "<ul><li><b>Định nghĩa Konglish:</b> Sự tiếp nhận và lai hóa tiếng Anh (English) vào ngữ pháp tiếng Hàn (Hangeul) tạo ra các từ vựng mang đặc trưng ngôn ngữ học xã hội đặc thù.</li><li><b>Động lực bùng nổ:</b> Xu hướng hội nhập toàn cầu hóa tự nhiên song hành cùng tốc độ lan tỏa của internet và các nền tảng mạng xã hội (TikTok, Shorts, K-media) tác động mạnh mẽ đến tư duy của giới trẻ xứ Kim Chi.</li></ul>"
+                title: "Slide 1: Konglish là gì thế nhỉ?",
+                content: "<ul><li><b>Định nghĩa dễ hiểu:</b> Là những từ vựng gốc tiếng Anh nhưng đã chui vào đời sống tiếng Hàn, được biến đổi phát âm và nghĩa để người Hàn sử dụng hằng ngày.</li><li><b>Vì sao Konglish bùng nổ:</b> Làn sóng toàn cầu hóa song hành cùng sự bùng nổ của mạng xã hội (như TikTok, Youtube Shorts, K-media) khiến giới trẻ Hàn đón nhận và biến hóa từ vựng vô cùng tự nhiên.</li></ul>"
             },
             {
-                title: "Slide 2: Hiện trạng Konglish: Từ hiện tượng đến bản địa hóa",
-                content: "<ul><li><b>Cơ chế vay mượn:</b> Người Hàn đón nhận tiếng Anh thông qua việc rút gọn từ, biến âm và thay đổi hoàn toàn nghĩa gốc để phục vụ đời sống bản địa.</li><li><b>Case Study 'False Friends' (Từ giả tạo):</b><br>- <b>Meeting (미팅):</b> Nghĩa gốc là họp hành, nghĩa Hàn là hẹn hò nhóm.<br>- <b>Skinship (스킨십):</b> Nghĩa gốc không tồn tại, nghĩa Hàn là cử chỉ thân mật.<br>- <b>Cunning (커닝):</b> Nghĩa gốc là mưu mẹo, nghĩa Hàn là gian lận thi cử.</li></ul>"
+                title: "Slide 2: Những hiểu lầm cười ra nước mắt",
+                content: "<ul><li><b>Cơ chế bản địa hóa:</b> Người Hàn tiếp nhận tiếng Anh theo cách riêng bằng cách biến đổi nghĩa, viết tắt hoặc ghép âm.</li><li><b>Những từ Konglish điển hình hay gây hiểu lầm:</b><br>- <b>Meeting (미팅):</b> Nghĩa gốc là họp hành, nghĩa Hàn là hẹn hò nhóm đó nha.<br>- <b>Skinship (스킨십):</b> Tiếng Anh không có từ này đâu, nghĩa Hàn là những cử chỉ chạm vai, nắm tay thân mật.<br>- <b>Cunning (커닝):</b> Tiếng Anh là mưu mẹo, xảo quyệt, còn nghĩa Hàn chỉ hành vi quay cóp trong phòng thi.</li></ul>"
             },
             {
-                title: "Slide 3: Sự trỗi dậy của Từ lóng thế hệ Alpha (Cận thế hệ số)",
-                content: "<ul><li><b>Đặc trưng ngôn ngữ Alpha:</b> Sự lên ngôi của các từ viết tắt bằng phụ âm đầu tạo tính mã hóa cao trong giao tiếp mạng xã hội.</li><li><b>Case Study điển hình trên TikTok:</b><br>- <b>갓생 (God-saeng):</b> Kết hợp 'God' (Chúa) và '생' (Sống) -> Sống hết mình, phong cách sống lành mạnh.<br>- <b>중꺾마 (Jung-kweok-ma):</b> Trích từ Esports -> Tinh thần quyết tâm kiên định, không bao giờ bỏ cuộc.<br>- <b>알잘딱깔센 (Al-jal-ttak-kkal-sen):</b> Tự hiểu và làm tốt một cách tinh tế.</li></ul>"
+                title: "Slide 3: Sức hút của từ lóng thế hệ Alpha",
+                content: "<ul><li><b>Cách nói độc đáo:</b> Trào lưu viết tắt các phụ âm đầu trong tiếng Hàn rất phổ biến trên không gian internet, giúp giới trẻ nhắn tin siêu nhanh.</li><li><b>Những từ lóng siêu hot trên TikTok:</b><br>- <b>갓생 (God-saeng):</b> Ghép giữa 'God' (Chúa) và '생' (Sống) -> Ý chỉ lối sống lành mạnh, chăm chỉ, sống hết mình.<br>- <b>중꺾마 (Jung-kweok-ma):</b> Trích từ giới Esports -> Ý chỉ tinh thần quyết tâm kiên định, dù có gặp khó khăn cũng tuyệt đối không bỏ cuộc.<br>- <b>알잘딱깔센 (Al-jal-ttak-kkal-sen):</b> Tự hiểu và làm việc một cách thông minh, gọn gàng và tinh tế.</li></ul>"
             },
             {
-                title: "Slide 4: Xu hướng hội nhập toàn cầu (Global Integration)",
-                content: "<ul><li><b>Cầu nối văn hóa:</b> Konglish và từ lóng hiện đại giúp giảm bớt tính trang trọng quá mức (Formality) của tiếng Hàn cổ, giúp người học ngoại quốc dễ tiếp cận K-culture một cách tự nhiên.</li><li><b>Tự do hóa ngôn ngữ:</b> Thừa nhận quyền tự do phát triển từ vựng theo nhu cầu thực tế của đời sống, thể hiện tư duy ngôn ngữ linh hoạt trong kỷ nguyên số hóa.</li></ul>"
+                title: "Slide 4: Konglish là cầu nối văn hóa gần gũi",
+                content: "<ul><li><b>Xóa nhòa khoảng cách:</b> Konglish và từ lóng đời mới giúp giảm bớt tính trang trọng quá mức (Formality) của ngữ pháp tiếng Hàn cổ, giúp các bạn nước ngoài học tiếng Hàn dễ dàng hòa nhập nhanh chóng.</li><li><b>Tự do phát triển:</b> Việc chấp nhận từ ngoại lai phản ánh tư duy cởi mở, linh hoạt và sự vận động không ngừng của ngôn ngữ trong đời sống hiện đại.</li></ul>"
             },
             {
-                title: "Slide 5: Rào cản học tập & Sự xung đột bản sắc",
-                content: "<ul><li><b>Xung đột giá trị:</b> Mâu thuẫn sâu sắc giữa trào lưu ngôn ngữ mở (Hybridization) với trường phái bảo vệ sự trong sáng của tiếng Hàn truyền thống (Purism).</li><li><b>Hệ lụy với người học:</b> Gây nhiễu loạn bộ lọc từ vựng của sinh viên ngoại quốc, dẫn đến việc dùng sai cấu trúc trang trọng hoặc mất điểm trong các kỳ thi học thuật như TOPIK.</li></ul>"
+                title: "Slide 5: Những rào cản và xung đột nhỏ",
+                content: "<ul><li><b>Cuộc chiến bảo vệ bản sắc:</b> Sự giằng xé giữa xu hướng hội nhập ngôn ngữ cởi mở và phong trào giữ gìn sự trong sáng của tiếng Hàn truyền thống (Purism).</li><li><b>Rào cản cho người học:</b> Rất nhiều bạn sinh viên nước ngoài bị nhầm lẫn từ mượn và từ lóng mạng, dẫn đến việc dùng nhầm trong các bài kiểm tra học thuật trang trọng hoặc kỳ thi TOPIK.</li></ul>"
             },
             {
-                title: "Slide 6: Case Study thực tế tại giảng đường & Công sở",
-                content: "<ul><li><b>Mô hình hóa xung đột:</b> Khi sinh viên nước ngoài lạm dụng từ lóng Alpha (갓생, 중꺾마) vào các văn bản nghiên cứu chuyên sâu hoặc thư điện tử gửi đối tác công sở.</li><li><b>Hậu quả:</b> Gây đứt gãy thông điệp giao tiếp, bị đánh giá thiếu chuyên nghiệp và thiếu sự tôn trọng văn hóa công sở nghiêm túc của người bản địa.</li></ul>"
+                title: "Slide 6: Dùng từ lóng sai chỗ và hậu quả thực tế",
+                content: "<ul><li><b>Hiểu lầm không đáng có:</b> Khi sinh viên lỡ dùng các từ lóng mạng (như 갓생, 중꺾마) vào các văn bản hành chính trang trọng hoặc email gửi đối tác công sở.</li><li><b>Hậu quả:</b> Gây đứt gãy thông điệp, khiến người nhận cảm thấy người viết thiếu chuyên nghiệp và thiếu sự tôn trọng văn hóa công sở nghiêm túc của nước bạn.</li></ul>"
             },
             {
-                title: "Slide 7: Định hướng & Giải pháp sư phạm (Pedagogical Solutions)",
-                content: "<ul><li><b>Tích hợp tài liệu động (Dynamic Syllabus):</b> Thiết kế giáo trình giảng dạy song hành từ chuẩn mực sách giáo khoa đến từ vựng đời sống thực tế kèm nhãn cảnh báo ngữ cảnh (Contextual Labels).</li><li><b>Giảng dạy tương tác (Media-based Analysis):</b> Cho sinh viên phân tích và thảo luận từ các video TikTok/K-media thực tế để nắm rõ giới hạn sử dụng từ lóng.</li><li><b>Chiến lược cốt lõi:</b> Định hình tư duy người học theo hướng 'Trí tuệ ngôn ngữ dựa trên bối cảnh' — biết rõ dùng từ gì, với ai và ở đâu.</li></ul>"
+                title: "Slide 7: Giải pháp sư phạm tụi mình đề xuất",
+                content: "<ul><li><b>Giáo trình động (Dynamic Syllabus):</b> Đưa từ vựng thực tế và đời sống mạng vào bài giảng, kèm cảnh báo cụ thể về ngữ cảnh sử dụng (Contextual Labels).</li><li><b>Học tập qua đa phương tiện:</b> Cho sinh viên mổ xẻ trực tiếp các video TikTok hay phim ảnh K-drama để hiểu đúng cách dùng của từ lóng.</li><li><b>Bài học cốt lõi:</b> Rèn luyện tư duy dùng từ dựa trên bối cảnh — hiểu rõ dùng từ nào, nói với ai và ở đâu cho lịch sự nhất.</li></ul>"
             }
         ];
 
@@ -2217,13 +2237,13 @@
 
         function nextSlide() {
             let nextIndex = currentSlide + 1;
-            if (nextIndex > 7) nextIndex = 1;
+            if (nextIndex > 7) nextIndex = 1; // Loop back
             loadSlide(nextIndex);
         }
 
         function prevSlide() {
             let prevIndex = currentSlide - 1;
-            if (prevIndex < 1) prevIndex = 7;
+            if (prevIndex < 1) prevIndex = 7; // Loop back
             loadSlide(prevIndex);
         }
 
@@ -2234,7 +2254,7 @@
                 if (checkIcon.style.display === 'none') {
                     checkIcon.style.display = 'block';
                     element.style.borderColor = 'rgba(189, 166, 255, 0.4)';
-                    element.style.background = 'rgba(88, 60, 212, 0.1)';
+                    element.style.background = 'rgba(80, 52, 196, 0.1)';
                 } else {
                     checkIcon.style.display = 'none';
                     element.style.borderColor = 'rgba(255, 255, 255, 0.05)';
